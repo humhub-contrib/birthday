@@ -1,0 +1,10 @@
+{
+    "id": "birthday",
+    "name": "Birthday Widget",
+    "description": "Module showing today's and tomorrow's birthdays on dashboard",
+    "keywords": ["birthday", "widget", "dashboard"],
+    "version": "0.4",
+    "humhub": {
+        "minVersion": "0.6"
+    }
+}

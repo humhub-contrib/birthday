@@ -6,7 +6,7 @@
  *
  */
 
-class BirthdayModule extends CWebModule
+class BirthdayModule extends HWebModule
 {
 	public function init()
 	{
