@@ -54,7 +54,7 @@ else {
 					echo ' -- '.Yii::t('BirthdayModule.base', 'in').' '.$days.' '.Yii::t('BirthdayModule.base', 'days');
 				}		
 				// show the users age if allowed		
-				if($profile->show_age != 0) {
+				if($profile->show_age == 'yes') {
 					echo '<br />'.Yii::t('BirthdayModule.base', 'becomes').' '.$age.' '.Yii::t('BirthdayModule.base', 'years old.');
 				}
 ?>
