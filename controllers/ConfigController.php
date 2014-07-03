@@ -57,12 +57,13 @@ class ConfigController extends Controller {
             if ($form->validate()) {
 
                 $form->shownDays = HSetting::Set('shownDays', $form->shownDays, 'birthday');
-
-#                $this->redirect(Yii::app()->createUrl('admin/manageModules'));
                 $this->redirect(Yii::app()->createUrl('birthday/config/config'));
             }
         } else {
             $form->shownDays = HSetting::Get('shownDays', 'birthday');
+            if($form->shownDays = '') {
+            	$form->shownDays = 0;
+            }
         }
 
         $this->render('config', array('model' => $form));
