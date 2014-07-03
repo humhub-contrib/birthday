@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * Defines the configure actions.
+ *
+ * @package humhub.modules.birthday.controllers
+ * @author Sebastian Stumpf
+ */
 class ConfigController extends Controller {
 
     public $subLayout = "application.modules_core.admin.views._layout";

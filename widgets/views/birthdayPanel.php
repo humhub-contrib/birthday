@@ -10,7 +10,7 @@
 ?>
 
 <div class="panel panel-default panel-birthday">
-    <div class="panel-heading"><?php echo Yii::t('BirthdayModule.base', 'Upcoming Birthdays'); ?></div>
+    <div class="panel-heading"><strong><?php echo Yii::t('BirthdayModule.base', 'Upcoming'); ?></strong> <?php echo Yii::t('BirthdayModule.base', 'birthdays'); ?></div>
     <div id="birthdayContent">
 <?php 
 if(empty($users)) {
@@ -29,7 +29,7 @@ else {
 			if ($profile != null) {
 				// get the corresponding user
 				$user = User::model()->findByPk($profile->user_id);
-				$birthYear = DateTime::createFromFormat('Y-m-d', $profile->birthday)->format('Y');
+				$birthYear = DateTime::createFromFormat('Y-m-d H:i:s', $profile->birthday)->format('Y');
 				// calculate the age
 				$age = $currentYear - $birthYear;				 
 ?>
@@ -54,7 +54,7 @@ else {
 					echo ' -- '.Yii::t('BirthdayModule.base', 'in').' '.$days.' '.Yii::t('BirthdayModule.base', 'days');
 				}		
 				// show the users age if allowed		
-				if($profile->show_age == 'yes') {
+				if($profile->birthday_hide_year == '0') {
 					echo '<br />'.Yii::t('BirthdayModule.base', 'becomes').' '.$age.' '.Yii::t('BirthdayModule.base', 'years old.');
 				}
 ?>

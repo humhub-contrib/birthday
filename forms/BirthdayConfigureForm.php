@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * BirthdayConfigureForm defines the configurable fields.
+ *
+ * @package humhub.modules.birthday.forms
+ * @author Sebastian Stumpf
+ */
 class BirthdayConfigureForm extends CFormModel {
 
     public $shownDays;

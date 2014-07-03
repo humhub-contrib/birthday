@@ -9,6 +9,7 @@
  * @author Sebastian Stumpf
  */
 class BirthdaySidebarWidget extends HWidget {
+	
 	public function run() {
 		$range = HSetting::Get('shownDays', 'birthday');
 		$range = $range == '' || $range == null ? 0 : $range;
