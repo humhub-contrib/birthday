@@ -10,7 +10,7 @@
         <?php
         $form = $this->beginWidget('CActiveForm', array(
             'id' => 'birthday-configure-form',
-            'enableAjaxValidation' => true,
+            'enableAjaxValidation' => false,
         ));
         ?>
 

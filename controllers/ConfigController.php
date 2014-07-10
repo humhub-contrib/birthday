@@ -45,8 +45,9 @@ class ConfigController extends Controller {
         $form = new BirthdayConfigureForm();
 
         // uncomment the following code to enable ajax-based validation
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'notes-configure-form') {
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'birthday-configure-form') {
             echo CActiveForm::validate($form);
+            echo 'ajax';
             Yii::app()->end();
         }
 
@@ -55,13 +56,12 @@ class ConfigController extends Controller {
             $form->attributes = $_POST['BirthdayConfigureForm'];
 
             if ($form->validate()) {
-
                 $form->shownDays = HSetting::Set('shownDays', $form->shownDays, 'birthday');
                 $this->redirect(Yii::app()->createUrl('birthday/config/config'));
             }
         } else {
             $form->shownDays = HSetting::Get('shownDays', 'birthday');
-            if($form->shownDays = '') {
+            if($form->shownDays == '' || $form->shownDays == null) {
             	$form->shownDays = 0;
             }
         }
