@@ -31,5 +31,17 @@ class BirthdayModule extends HWebModule
 		return Yii::app()->createUrl('//birthday/config/config');
 	}
 	
+	/**
+	 * Enables this module
+	 */
+	public function enable()
+	{
+		if (!$this->isEnabled()) {
+			// set default config values
+			HSetting::Set('shownDays', 2, 'birthday');
+		}
+		parent::enable();
+	}
+	
 }
 ?>

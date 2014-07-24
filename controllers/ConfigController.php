@@ -61,9 +61,6 @@ class ConfigController extends Controller {
             }
         } else {
             $form->shownDays = HSetting::Get('shownDays', 'birthday');
-            if($form->shownDays == '' || $form->shownDays == null) {
-            	$form->shownDays = 0;
-            }
         }
 
         $this->render('config', array('model' => $form));
