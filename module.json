@@ -1,10 +1,11 @@
 {
     "id": "birthday",
     "name": "Birthday Widget",
-    "description": "Module showing upcoming birthdays on dashboard",
+    "description": "This widget showing upcoming birthdays on dashboard.",
     "keywords": ["birthday", "widget", "dashboard"],
-    "version": "0.9.2",
+    "version": "0.9.3",
     "humhub": {
-        "minVersion": "0.6.3"
-    }
+        "minVersion": "0.8.0"
+    },
+    "screenshots": ["assets/screen1.png"]
 }
