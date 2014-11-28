@@ -9,8 +9,8 @@ return array (
   'You may configure the number of days within the upcoming birthdays are shown.' => '',
   'becomes' => '',
   'birthdays' => '',
-  'days' => '',
-  'in' => '',
-  'today' => '',
+  'days' => 'dias',
+  'in' => 'em',
+  'today' => 'hoje',
   'years old.' => '',
 );

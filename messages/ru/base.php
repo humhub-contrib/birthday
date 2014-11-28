@@ -1,6 +1,6 @@
 <?php
 return array (
-  'Birthday Module Configuration' => 'Настройки модуля Дни рождения',
+  'Birthday Module Configuration' => 'Настройки модуля День рождения',
   'No birthday.' => 'Сегодня никто не празднует день рождения.',
   'Save' => 'Сохранить',
   'The number of days future bithdays will be shown within.' => 'Количество отображаемых в блоке дней рождения.',
