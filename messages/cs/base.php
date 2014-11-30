@@ -7,10 +7,10 @@ return array (
   'Tomorrow' => 'Zítra',
   'Upcoming' => 'Nadcházející',
   'You may configure the number of days within the upcoming birthdays are shown.' => 'Můžete nastavit počet dnů před narozeninami, kdy na ně bude upozorněno.',
-  'becomes' => 'budou',
+  'becomes' => 'bude',
   'birthdays' => 'narozeniny',
   'days' => 'dnů',
   'in' => 'za',
   'today' => 'dnes',
-  'years old.' => 'let starý(á).',
+  'years old.' => 'let.',
 );
