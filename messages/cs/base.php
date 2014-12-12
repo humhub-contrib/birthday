@@ -1,6 +1,6 @@
 <?php
 return array (
-  'Birthday Module Configuration' => 'Nastavení modulu narozenin',
+  'Birthday Module Configuration' => 'Nastavení modulu Narozeniny',
   'No birthday.' => 'Žádné narozeniny.',
   'Save' => 'Uložit',
   'The number of days future bithdays will be shown within.' => 'Počet dnů v budoucnosti, ve kterých se budou zobrazovat narozeniny.',
