@@ -52,7 +52,7 @@
 
                                         <!-- Show content -->
                                         <div class="media-body">
-                                            <strong><?php echo $user->displayName; ?></strong>
+                                            <strong><?php echo CHtml::encode($user->displayName); ?></strong>
                                             <?php
                                             // show when the user has his birthday
                                             if ($days == 0) {
