@@ -1,5 +1,6 @@
 <?php
 return array (
+  'Back to modules' => 'Terug naar modules',
   'Birthday Module Configuration' => 'Verjaardagen module configuratie',
   'No birthday.' => 'Geen verjaardagen.',
   'Save' => 'Opslaan',

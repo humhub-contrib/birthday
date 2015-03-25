@@ -1,5 +1,6 @@
 <?php
 return array (
+  'Back to modules' => '',
   'Birthday Module Configuration' => 'Fødselsdag Modul konfiguration',
   'No birthday.' => 'Ingen fødselsdag.',
   'Save' => 'Gem',

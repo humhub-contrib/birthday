@@ -1,5 +1,6 @@
 <?php
 return array (
+  'Back to modules' => 'Назад к модулям',
   'Birthday Module Configuration' => 'Настройки модуля День рождения',
   'No birthday.' => 'Сегодня никто не празднует день рождения.',
   'Save' => 'Сохранить',

@@ -1,5 +1,6 @@
 <?php
 return array (
+  'Back to modules' => 'Voltar aos módulos',
   'Birthday Module Configuration' => 'Configuração do Módulo de Aniversário',
   'No birthday.' => 'Nenhum aniversariante.',
   'Save' => 'Salvar',

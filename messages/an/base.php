@@ -1,8 +1,9 @@
 <?php
 return array (
+  'Back to modules' => 'Zpět k modulům',
   'Birthday Module Configuration' => '',
   'No birthday.' => '',
-  'Save' => '',
+  'Save' => 'Uložit',
   'The number of days future bithdays will be shown within.' => '',
   'Tomorrow' => '',
   'Upcoming' => '',

@@ -1,5 +1,6 @@
 <?php
 return array (
+  'Back to modules' => '',
   'Birthday Module Configuration' => '生日模組設定',
   'No birthday.' => '無生日資料',
   'Save' => '儲存',

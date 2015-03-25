@@ -1,5 +1,6 @@
 <?php
 return array (
+  'Back to modules' => 'Zpět na přehled modulů',
   'Birthday Module Configuration' => 'Nastavení modulu Narozeniny',
   'No birthday.' => 'Žádné narozeniny.',
   'Save' => 'Uložit',

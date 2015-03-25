@@ -1,5 +1,6 @@
 <?php
 return array (
+  'Back to modules' => 'بازگشت‌ به ماژول‌‌ها',
   'Birthday Module Configuration' => 'پیکربندی ماژول زادروز',
   'No birthday.' => 'زادروزی وجود ندارد.',
   'Save' => 'ذخیره',
