@@ -10,8 +10,8 @@ return array (
   'You may configure the number of days within the upcoming birthdays are shown.' => 'Вы можете настроить количество предстоящих дней рождения для отображения в блоке.',
   'becomes' => 'исполняется',
   'birthdays' => 'дни рождения',
-  'days' => 'дни',
-  'in' => 'в',
+  'days' => 'дня',
+  'in' => 'через',
   'today' => 'сегодня',
   'years old.' => 'лет.',
 );
