@@ -1,70 +1,34 @@
 <?php
+
+namespace humhub\modules\birthday\controllers;
+
+use Yii;
+use humhub\models\Setting;
+
 /**
  * Defines the configure actions.
  *
  * @package humhub.modules.birthday.controllers
  * @author Sebastian Stumpf
  */
-class ConfigController extends Controller {
-
-    public $subLayout = "application.modules_core.admin.views._layout";
-
-    /**
-     * @return array action filters
-     */
-    public function filters() {
-        return array(
-            'accessControl', // perform access control for CRUD operations
-        );
-    }
-
-    /**
-     * Specifies the access control rules.
-     * This method is used by the 'accessControl' filter.
-     * @return array access control rules
-     */
-    public function accessRules() {
-        return array(
-            array('allow',
-                'expression' => 'Yii::app()->user->isAdmin()',
-            ),
-            array('deny', // deny all users
-                'users' => array('*'),
-            ),
-        );
-    }
-
+class ConfigController extends \humhub\modules\admin\components\Controller
+{
 
     /**
      * Configuration Action for Super Admins
      */
-    public function actionConfig() {
-
-        Yii::import('birthday.forms.*');
-
-        $form = new BirthdayConfigureForm();
-
-        // uncomment the following code to enable ajax-based validation
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'birthday-configure-form') {
-            echo CActiveForm::validate($form);
-            echo 'ajax';
-            Yii::app()->end();
+    public function actionIndex()
+    {
+        $form = new \humhub\modules\birthday\models\BirthdayConfigureForm();
+        $form->shownDays = Setting::Get('shownDays', 'birthday');
+        if ($form->load(Yii::$app->request->post()) && $form->validate()) {
+            $form->shownDays = Setting::Set('shownDays', $form->shownDays, 'birthday');
+            return $this->redirect(['/birthday/config']);
         }
 
-        if (isset($_POST['BirthdayConfigureForm'])) {
-            $_POST['BirthdayConfigureForm'] = Yii::app()->input->stripClean($_POST['BirthdayConfigureForm']);
-            $form->attributes = $_POST['BirthdayConfigureForm'];
-
-            if ($form->validate()) {
-                $form->shownDays = HSetting::Set('shownDays', $form->shownDays, 'birthday');
-                $this->redirect(Yii::app()->createUrl('birthday/config/config'));
-            }
-        } else {
-            $form->shownDays = HSetting::Get('shownDays', 'birthday');
-        }
-
-        $this->render('config', array('model' => $form));
+        return $this->render('index', array('model' => $form));
     }
+
 }
 
 ?>

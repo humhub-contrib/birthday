@@ -1,5 +1,11 @@
 <?php
 
+namespace humhub\modules\birthday\widgets;
+
+use Yii;
+use humhub\modules\user\models\User;
+use humhub\models\Setting;
+
 /**
  * BirthdaySidebarWidget displays the users of upcoming birthdays.
  *
@@ -8,38 +14,63 @@
  * @package humhub.modules.birthday.widgets
  * @author Sebastian Stumpf
  */
-class BirthdaySidebarWidget extends HWidget {
-	
-	public function run() {
-		$range = HSetting::Get('shownDays', 'birthday');
-		$range = $range == '' || $range == null ? 0 : $range;
-		$users = $this->getBirthdayUsers ( $range );
-		if(!empty($users)) {
-			$this->render ( 'birthdayPanel', array (
-			'users' => $this->getBirthdayUsers ( $range ) 
-			) );
-		}
-	}
-	
-	/**
-	 * Get the User objects from the db that are born at the given date and have allowed to show their birthday.
-	 *
-	 * @param array $range
-	 *        	the range that should be checked from today on in days.
-	 * @return array of arrays of users, indicated by ranges.
-	 */
-	private function getBirthdayUsers($range = 0) {
-		$users = array ();
-		for($i = 0; $i <= $range; $i ++) {
-			// select the users that have birthday in $i days
-			$temp = Profile::model ()->findAll ( 'MONTH(DATE(`birthday`)) = MONTH(DATE_ADD(DATE(NOW()),INTERVAL ' . $i . ' DAY)) AND DAY(DATE(`birthday`)) = DAY(DATE_ADD(DATE(NOW()),INTERVAL ' . $i . ' DAY))' );
-			// and add them to the array if there are any
-			if(!empty($temp)) {
-				$users [$i] = $temp;
-			} 
-		}
-		return $users;
-	}
+class BirthdaySidebarWidget extends \yii\base\Widget
+{
+
+    public function run()
+    {
+        $range = (int) Setting::Get('shownDays', 'birthday');
+
+        $birthdayCondition = "DATE_ADD(profile.birthday, 
+                INTERVAL YEAR(CURDATE())-YEAR(profile.birthday)
+                         + IF(DAYOFYEAR(CURDATE()) > DAYOFYEAR(profile.birthday),1,0)
+                YEAR)  
+            BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL " . $range . " DAY);";
+
+        $users = User::find()
+                ->joinWith('profile')
+                ->where($birthdayCondition)
+                ->limit(10)
+                ->all();
+
+        if (count($users) == 0) {
+            return;
+        }
+
+        return $this->render('birthdayPanel', array(
+                    'users' => $users
+        ));
+    }
+
+    public function getDays($user)
+    {
+        $now = new \DateTime('now');
+        $now->setTime(00, 00, 00);
+        $nextBirthday = new \DateTime(date('y') . '-' . Yii::$app->formatter->asDate($user->profile->birthday, 'php:m-d'));
+
+        $days = $nextBirthday->diff($now)->d;
+
+        // Handle turn of year
+        if ($days < 0) {
+            $nextBirthday->modify('+1 year');
+            $days = $nextBirthday->diff($now)->d;
+        }
+
+        return $days;
+    }
+
+    public function getAge($user)
+    {
+        $birthday = new \DateTime($user->profile->birthday);
+        $age = $birthday->diff(new \DateTime('now'))->y;
+
+        if ($this->getDays($user) != 0) {
+            $age++;
+        }
+
+        return $age;
+    }
+
 }
 
 ?>
