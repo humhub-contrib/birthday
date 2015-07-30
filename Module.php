@@ -11,7 +11,6 @@ use yii\helpers\Url;
  * BirthdayModule is responsible for the the birthday functions.
  * 
  * @author Sebastian Stumpf
- *
  */
 class Module extends \humhub\components\Module
 {
@@ -30,18 +29,21 @@ class Module extends \humhub\components\Module
         $event->sender->addWidget(BirthdaySidebarWidget::className(), array(), array('sortOrder' => 200));
     }
 
+    /**
+     * @inheritdoc
+     */
     public function getConfigUrl()
     {
         return Url::to(['/birthday/config']);
     }
 
     /**
-     * Enables this module
+     * @inheritdoc
      */
     public function enable()
     {
+        parent::enable();
         Setting::Set('shownDays', 2, 'birthday');
-        return parent::enable();
     }
 
 }
