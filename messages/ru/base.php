@@ -17,7 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'No birthday.' => 'Сегодня никто не празднует день рождения.',
     'Back to modules' => 'Назад к модулям',
     'Birthday Module Configuration' => 'Настройки модуля День рождения',
     'Save' => 'Сохранить',

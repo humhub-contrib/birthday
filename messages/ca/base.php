@@ -27,7 +27,6 @@ return [
     'days' => '',
     'today' => '',
     'years old.' => '',
-    'No birthday.' => '@@@@',
     'Back to modules' => 'Torna al mòduls',
     'Save' => 'Desa',
     'in' => 'a',

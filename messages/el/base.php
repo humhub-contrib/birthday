@@ -29,6 +29,5 @@ return [
     'in' => '',
     'today' => '',
     'years old.' => '',
-    'No birthday.' => '@@@@',
     'Save' => 'Αποθήκευση',
 ];

@@ -17,7 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'No birthday.' => 'زادروزی وجود ندارد.',
     'Back to modules' => 'بازگشت‌ به ماژول‌‌ها',
     'Birthday Module Configuration' => 'پیکربندی ماژول زادروز',
     'Save' => 'ذخیره',

@@ -17,7 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'No birthday.' => 'Nėra gimimo dienos.',
     'Back to modules' => 'Atgal į modulius',
     'Birthday Module Configuration' => 'Gimimo dienos modulio konfigūracija',
     'Save' => 'Išsaugoti',

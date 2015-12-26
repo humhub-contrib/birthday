@@ -28,7 +28,6 @@ return [
     'in' => '',
     'today' => '',
     'years old.' => '',
-    'No birthday.' => '@@@@',
     'Back to modules' => '返回模块',
     'Save' => '保存',
 ];

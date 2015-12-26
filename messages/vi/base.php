@@ -29,6 +29,5 @@ return [
     'days' => '',
     'today' => '',
     'years old.' => '',
-    'No birthday.' => '@@@@',
     'in' => 'tại',
 ];

@@ -17,7 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'No birthday.' => 'لا يوجد عيد ميلاد.',
     'Back to modules' => 'عودة للموديولات',
     'Birthday Module Configuration' => 'إعدادات موديول عيد الميلاد',
     'Save' => 'حفظ',

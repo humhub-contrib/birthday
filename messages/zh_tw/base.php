@@ -18,7 +18,6 @@
  */
 return [
     'Back to modules' => '',
-    'No birthday.' => '無生日資料',
     'Birthday Module Configuration' => '生日模組設定',
     'Save' => '儲存',
     'The number of days future bithdays will be shown within.' => '多少天前會通知生日',

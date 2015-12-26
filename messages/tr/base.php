@@ -21,7 +21,6 @@ return [
     'The number of days future bithdays will be shown within.' => '',
     'You may configure the number of days within the upcoming birthdays are shown.' => '',
     'in' => '',
-    'No birthday.' => 'Hiçbir doğum günü yok.',
     'Back to modules' => 'Modüllere dön',
     'Save' => 'Kaydet',
     'Tomorrow' => 'Yarın',

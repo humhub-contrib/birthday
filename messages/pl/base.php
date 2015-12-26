@@ -17,7 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'No birthday.' => 'Nie ma urodzin.',
     'Back to modules' => 'Powrót do modułów',
     'Birthday Module Configuration' => 'Konfiguracja modułu Birthday',
     'Save' => 'Zapisz',

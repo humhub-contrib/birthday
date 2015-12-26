@@ -28,7 +28,6 @@ return [
     'in' => '',
     'today' => '',
     'years old.' => '',
-    'No birthday.' => '@@@@',
     'Back to modules' => 'モジュールへ戻る',
     'Save' => '保存',
 ];

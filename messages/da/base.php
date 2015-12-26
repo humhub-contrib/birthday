@@ -17,7 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'No birthday.' => 'Ingen fødselsdag.',
     'Back to modules' => 'Tilbage til moduler',
     'Birthday Module Configuration' => 'Fødselsdag Modul konfiguration',
     'Save' => 'Gem',

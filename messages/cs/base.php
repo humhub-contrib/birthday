@@ -17,7 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'No birthday.' => 'Žádné narozeniny.',
     'Back to modules' => 'Zpět na přehled modulů',
     'Birthday Module Configuration' => 'Nastavení modulu Narozeniny',
     'Save' => 'Uložit',

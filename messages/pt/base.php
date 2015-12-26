@@ -28,7 +28,6 @@ return [
     'in' => '',
     'today' => '',
     'years old.' => '',
-    'No birthday.' => '@@@@',
     'Back to modules' => 'Voltar para os módulos',
     'Save' => 'Guardar',
 ];
