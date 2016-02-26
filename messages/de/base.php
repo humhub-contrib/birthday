@@ -9,7 +9,7 @@ return array (
   'You may configure the number of days within the upcoming birthdays are shown.' => 'Du kannst die Anzahl an Tagen einstellen, an denen zukünftige Geburstage vorab angezeigt werden.',
   'becomes' => 'wird',
   'birthdays' => 'Geburtstage',
-  'days' => 'Tage',
+  'days' => 'Tagen',
   'in' => 'in',
   'today' => 'heute',
   'years old.' => 'Jahre alt.',
