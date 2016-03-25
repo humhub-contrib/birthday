@@ -21,10 +21,12 @@ class BirthdaySidebarWidget extends \yii\base\Widget
     {
         $range = (int) Setting::Get('shownDays', 'birthday');
 
-        $birthdayCondition = "DATE_ADD(profile.birthday, 
-                INTERVAL YEAR(CURDATE())-YEAR(profile.birthday)
-                         + IF(DAYOFYEAR(CURDATE()) > DAYOFYEAR(profile.birthday),1,0)
-                YEAR)  
+        $birthdayCondition = "
+            CONCAT(YEAR(CURDATE())+
+                    IF(CONCAT( MONTH( CURDATE() ) ,DAY( CURDATE() ) ) >  CONCAT( MONTH(profile.birthday),DAY(profile.birthday)),1,0),
+                    '-', MONTH(profile.birthday),
+                    '-', DAY(profile.birthday)
+            )               
             BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL " . $range . " DAY);";
 
         $users = User::find()
