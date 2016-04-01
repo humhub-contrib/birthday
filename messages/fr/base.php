@@ -22,7 +22,7 @@ return [
     'Save' => 'Enregistrer',
     'The number of days future bithdays will be shown within.' => 'Le nombre de jours avant qu\'un anniversaire soit affiché.',
     'Tomorrow' => 'Demain',
-    'Upcoming' => 'Prochainement',
+    'Upcoming' => 'Prochains',
     'You may configure the number of days within the upcoming birthdays are shown.' => 'Vous pouvez spécifier le nombre de jours avant qu\'un anniversaire soit affiché.',
     'becomes' => 'aura',
     'birthdays' => 'anniversaires',
