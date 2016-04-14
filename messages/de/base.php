@@ -1,6 +1,6 @@
 <?php
 return array (
-  '<strong>Birthdays</strong> within the next {days} days' => '<strong>Geburtstage>strong> in den nächsten {days} Tagen',
+  '<strong>Birthdays</strong> within the next {days} days' => '<strong>Geburtstage</strong> in den nächsten {days} Tagen',
   'Back to modules' => 'Zurück zu den Modulen',
   'Birthday Module Configuration' => 'Konfiguration Geburtstagsmodul',
   'In {days} days' => 'In {days} Tagen',
