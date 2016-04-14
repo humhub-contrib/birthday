@@ -15,7 +15,7 @@ $assets = \humhub\modules\birthday\Assets::register($this);
 
 <div class="panel panel-default panel-birthday">
     <div class="panel-heading">
-        <strong><?php echo Yii::t('BirthdayModule.base', 'Upcoming'); ?></strong> <?php echo Yii::t('BirthdayModule.base', 'birthdays'); ?>
+        <?php echo Yii::t('BirthdayModule.base', '<strong>Birthdays</strong> within the next {days} days', ['days' => $dayRange]); ?>
     </div>
     <div id="birthdayContent">
         <ul id="birthdayList" class="media-list">
@@ -42,18 +42,20 @@ $assets = \humhub\modules\birthday\Assets::register($this);
                             <!-- Show content -->
                             <div class="media-body">
                                 <strong><?php echo Html::encode($user->displayName); ?></strong>
+
                                 <?php
                                 // show when the user has his birthday
                                 if ($remainingDays == 0) {
-                                    echo ' <span class="label label-danger">' . Yii::t('BirthdayModule.base', 'today') . '</span>';
+                                    echo ' <span class="label label-danger pull-right">' . Yii::t('BirthdayModule.base', 'today') . '</span>';
                                 } else if ($remainingDays == 1) {
-                                    echo ' (' . Yii::t('BirthdayModule.base', 'Tomorrow') . ')';
+                                    echo ' <span class="label label-default pull-right">' . Yii::t('BirthdayModule.base', 'Tomorrow') . '</span>';
                                 } else {
-                                    echo ' (' . Yii::t('BirthdayModule.base', 'in') . ' ' . $remainingDays . ' ' . Yii::t('BirthdayModule.base', 'days') . ')';
+                                    echo ' <span class="label label-default pull-right">' . Yii::t('BirthdayModule.base', 'In {days} days', ['days' => $remainingDays]) . '</span>';
                                 }
+
                                 // show the users age if allowed
                                 if ($user->profile->birthday_hide_year == '0') {
-                                    echo '<br />' . Yii::t('BirthdayModule.base', 'becomes') . ' ' . $this->context->getAge($user) . ' ' . Yii::t('BirthdayModule.base', 'years old.');
+                                    echo '<br />' . Yii::t('BirthdayModule.base', 'becomes {years} years old.', ['years' => $this->context->getAge($user)]);
                                 }
                                 ?>
                             </div>
