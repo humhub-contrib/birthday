@@ -17,9 +17,9 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    '<strong>Birthdays</strong> within the next {days} days' => '',
-    'In {days} days' => '',
-    'becomes {years} years old.' => '',
+    '<strong>Birthdays</strong> within the next {days} days' => '<strong>Anniversaires</strong> dans les {days} prochains jours',
+    'In {days} days' => 'Dans {days} jours',
+    'becomes {years} years old.' => 'va avoir {years} ans.',
     'Back to modules' => 'Retour aux modules',
     'Birthday Module Configuration' => 'Configuration du module Anniversaire',
     'Save' => 'Enregistrer',
