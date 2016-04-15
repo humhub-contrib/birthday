@@ -24,7 +24,7 @@ class BirthdaySidebarWidget extends \yii\base\Widget
         $birthdayCondition = "DATE_ADD(profile.birthday, 
                 INTERVAL YEAR(CURDATE())-YEAR(profile.birthday)
                          + IF(DAYOFYEAR(CURDATE()) > DAYOFYEAR(profile.birthday),1,0)
-                YEAR)  
+                YEAR)
             BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL " . $range . " DAY);";
 
         $users = User::find()
@@ -33,12 +33,18 @@ class BirthdaySidebarWidget extends \yii\base\Widget
                 ->limit(10)
                 ->all();
 
+        // Sort birthday list
+        usort($users, function($a, $b) {
+            return $this->getDays($a) - $this->getDays($b);
+        });
+
         if (count($users) == 0) {
             return;
         }
 
         return $this->render('birthdayPanel', array(
-                    'users' => $users
+                    'users' => $users,
+                    'dayRange' => $range
         ));
     }
 
