@@ -21,10 +21,10 @@ class BirthdaySidebarWidget extends \yii\base\Widget
     {
         $range = (int) Setting::Get('shownDays', 'birthday');
 
+        // Check if the next birthday is between the current date and (currentdate + range days)
         $birthdayCondition = "DATE_ADD(profile.birthday, 
                 INTERVAL YEAR(CURDATE())-YEAR(profile.birthday)
-                         + IF(DAYOFYEAR(CURDATE()) > DAYOFYEAR(profile.birthday),1,0)
-                YEAR)
+                         + IF((CURDATE() > DATE_ADD(`profile`.birthday, INTERVAL (YEAR(CURDATE())-YEAR(profile.birthday)) YEAR)),1,0) YEAR)
             BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL " . $range . " DAY);";
 
         $users = User::find()
@@ -32,7 +32,7 @@ class BirthdaySidebarWidget extends \yii\base\Widget
                 ->where($birthdayCondition)
                 ->limit(10)
                 ->all();
-
+        
         // Sort birthday list
         usort($users, function($a, $b) {
             return $this->getDays($a) - $this->getDays($b);
