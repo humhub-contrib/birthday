@@ -25,11 +25,12 @@ class BirthdaySidebarWidget extends \yii\base\Widget
         $birthdayCondition = "DATE_ADD(profile.birthday, 
                 INTERVAL YEAR(CURDATE())-YEAR(profile.birthday)
                          + IF((CURDATE() > DATE_ADD(`profile`.birthday, INTERVAL (YEAR(CURDATE())-YEAR(profile.birthday)) YEAR)),1,0) YEAR)
-            BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL " . $range . " DAY);";
+            BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL " . $range . " DAY)";
 
         $users = User::find()
                 ->joinWith('profile')
                 ->where($birthdayCondition)
+                ->active()
                 ->limit(10)
                 ->all();
         

@@ -3,7 +3,7 @@
     "name": "Birthday Widget",
     "description": "This widget showing upcoming birthdays on dashboard.",
     "keywords": ["birthday", "widget", "dashboard"],
-    "version": "1.0.7",
+    "version": "1.0.8",
     "humhub": {
         "minVersion": "0.20"
     },
