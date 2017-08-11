@@ -15,6 +15,11 @@ use yii\helpers\Url;
 class Module extends \humhub\components\Module
 {
 
+    /**      *
+     * @var int the sort order for the birthdays sidebar widget
+     */
+    public $sidebarSortOrder = 200;
+    
     /**
      * On build of the dashboard sidebar widget, add the birthday widget if module is enabled.
      *
@@ -25,8 +30,9 @@ class Module extends \humhub\components\Module
         if (Yii::$app->user->isGuest) {
             return;
         }
-
-        $event->sender->addWidget(BirthdaySidebarWidget::className(), array(), array('sortOrder' => 200));
+        
+        $module = Yii::$app->getModule('birthday');
+        $event->sender->addWidget(BirthdaySidebarWidget::className(), array(), array('sortOrder' => $module->sidebarSortOrder));
     }
 
     /**
