@@ -20,24 +20,17 @@ class BirthdaySidebarWidget extends \yii\base\Widget
     public function run()
     {
         $range = (int) Setting::Get('shownDays', 'birthday');
-
-        // Check if the next birthday is between the current date and (currentdate + range days)
-        $birthdayCondition = "DATE_ADD(profile.birthday, 
-                INTERVAL YEAR(CURDATE())-YEAR(profile.birthday)
-                         + IF((CURDATE() > DATE_ADD(`profile`.birthday, INTERVAL (YEAR(CURDATE())-YEAR(profile.birthday)) YEAR)),1,0) YEAR)
-            BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL " . $range . " DAY)";
+        $nextBirthDaySql = "DATE_ADD(profile.birthday, INTERVAL YEAR(CURDATE())-YEAR(profile.birthday) + IF((CURDATE() > DATE_ADD(`profile`.birthday, INTERVAL (YEAR(CURDATE())-YEAR(profile.birthday)) YEAR)),1,0) YEAR)";
+        $birthdayCondition = $nextBirthDaySql . " BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL " . $range . " DAY)";
 
         $users = User::find()
+                ->addSelect(['*', 'user.*', 'profile.*', new \yii\db\Expression($nextBirthDaySql . ' as next_birthday')])
                 ->joinWith('profile')
                 ->where($birthdayCondition)
+                ->addOrderBy(['next_birthday' => SORT_ASC])
                 ->active()
                 ->limit(10)
                 ->all();
-        
-        // Sort birthday list
-        usort($users, function($a, $b) {
-            return $this->getDays($a) - $this->getDays($b);
-        });
 
         if (count($users) == 0) {
             return;
