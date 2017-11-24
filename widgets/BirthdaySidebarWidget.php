@@ -20,8 +20,14 @@ class BirthdaySidebarWidget extends \yii\base\Widget
     public function run()
     {
         $range = (int) Setting::Get('shownDays', 'birthday');
+        $excludedGroup = (int) Setting::Get('excludedGroup', 'birthday');
+        $exclusionSql = "";
+        if ($excludedGroup > 0) {
+            $exclusionSql = "NOT profile.user_id IN (SELECT group_user.user_id FROM group_user WHERE group_user.group_id= " . $excludedGroup . ") AND ";
+        }
+
         $nextBirthDaySql = "DATE_ADD(profile.birthday, INTERVAL YEAR(CURDATE())-YEAR(profile.birthday) + IF((CURDATE() > DATE_ADD(`profile`.birthday, INTERVAL (YEAR(CURDATE())-YEAR(profile.birthday)) YEAR)),1,0) YEAR)";
-        $birthdayCondition = $nextBirthDaySql . " BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL " . $range . " DAY)";
+        $birthdayCondition = $exclusionSql . $nextBirthDaySql . " BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL " . $range . " DAY)";
 
         $users = User::find()
                 ->addSelect(['*', 'user.*', 'profile.*', new \yii\db\Expression($nextBirthDaySql . ' as next_birthday')])

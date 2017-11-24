@@ -22,6 +22,12 @@ use humhub\compat\CActiveForm;
             <?php echo $form->error($model, 'shownDays'); ?>
         </div>
 
+        <div class="form-group">
+            <?php echo $form->labelEx($model, 'excludedGroup'); ?>
+            <?php echo $form->textField($model, 'excludedGroup', array('class' => 'form-control')); ?>
+            <?php echo $form->error($model, 'excludedGroup'); ?>
+        </div>
+
         <hr>
         <?php echo Html::submitButton(Yii::t('BirthdayModule.base', 'Save'), array('class' => 'btn btn-primary')); ?>
         <a class="btn btn-default" href="<?php echo Url::to(['/admin/module']); ?>"><?php echo Yii::t('BirthdayModule.base', 'Back to modules'); ?></a>
