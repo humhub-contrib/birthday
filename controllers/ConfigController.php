@@ -21,8 +21,10 @@ class ConfigController extends \humhub\modules\admin\components\Controller
     {
         $form = new \humhub\modules\birthday\models\BirthdayConfigureForm();
         $form->shownDays = Setting::Get('shownDays', 'birthday');
+        $form->excludedGroup = Setting::Get('excludedGroup', 'birthday');
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             $form->shownDays = Setting::Set('shownDays', $form->shownDays, 'birthday');
+            $form->excludedGroup = Setting::Set('excludedGroup', $form->excludedGroup, 'birthday');
             return $this->redirect(['/birthday/config']);
         }
 
