@@ -13,7 +13,8 @@ use yii\helpers\Html;
 $assets = \humhub\modules\birthday\Assets::register($this);
 ?>
 
-<div class="panel panel-default panel-birthday">
+<div class="panel panel-default panel-birthday" id="panel-birthday">
+    <?= \humhub\widgets\PanelMenu::widget(['id' => 'panel-birthday']); ?>
     <div class="panel-heading">
         <?php echo Yii::t('BirthdayModule.base', '<strong>Birthdays</strong> within the next {days} days', ['days' => $dayRange]); ?>
     </div>
