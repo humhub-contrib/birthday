@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.0.13 - January 2, 2018
+------------------------
+- Fix: Removed day string from time calculation
+
+
 1.0.12 - January 2, 2018
 ------------------------
 - Enh: Add configuration option to exclude group (@enguerrand)
