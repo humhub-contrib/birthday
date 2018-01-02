@@ -47,8 +47,9 @@ class BirthdaySidebarWidget extends \yii\base\Widget
         $now = new \DateTime('now');
         $now->setTime(00, 00, 00);
         $nextBirthday = new \DateTime(date('y') . '-' . Yii::$app->formatter->asDate($user->profile->birthday, 'php:m-d'));
+        $interval = $now->diff($nextBirthday);
 
-        $days = $nextBirthday->diff($now)->days;
+        $days = (int)$interval->format('%R%a days');
 
         // Handle turn of year
         if ($days < 0) {
