@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.0.12 - January 2, 2018
+------------------------
+- Enh: Add configuration option to exclude group (@enguerrand)
+- Enh: Collapsible widget (@Felli)
+- Fix #14: Incorrect turn of year handling (@enguerrand)
+
+
 1.0.11 - October 9, 2017
 ------------------------
 - Fix: Incorrect order on many birthdays at the same time range
