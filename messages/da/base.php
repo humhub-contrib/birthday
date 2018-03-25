@@ -19,11 +19,12 @@
 return [
     '<strong>Birthdays</strong> within the next {days} days' => '',
     'In {days} days' => '',
+    'The group id of the group that should be exluded.' => '',
+    'The number of days future birthdays will be shown within.' => '',
     'becomes {years} years old.' => '',
     'Back to modules' => 'Tilbage til moduler',
     'Birthday Module Configuration' => 'Fødselsdag Modul konfiguration',
     'Save' => 'Gem',
-    'The number of days future bithdays will be shown within.' => 'Antallet af dage fremtidige fødselsdage vil blive vist.',
     'Tomorrow' => 'Imorgen',
     'You may configure the number of days within the upcoming birthdays are shown.' => 'Du kan indstille, antallet af dage som vises  i kommende fødselsdage.',
     'today' => 'i dag',

@@ -19,11 +19,12 @@
 return [
     '<strong>Birthdays</strong> within the next {days} days' => '',
     'In {days} days' => '',
+    'The group id of the group that should be exluded.' => '',
+    'The number of days future birthdays will be shown within.' => '',
     'becomes {years} years old.' => '',
     'Back to modules' => 'Powrót do modułów',
     'Birthday Module Configuration' => 'Konfiguracja modułu Birthday',
     'Save' => 'Zapisz',
-    'The number of days future bithdays will be shown within.' => 'Liczba dni naprzód kiedy dzień urodzin będzie się wyświetlał. ',
     'Tomorrow' => 'Jutro',
     'You may configure the number of days within the upcoming birthdays are shown.' => 'Możesz skonfigurować liczbę dni kiedy będą pokazywane nadchodzące urodziny.',
     'today' => 'dzisiaj',
