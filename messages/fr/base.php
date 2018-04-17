@@ -2,7 +2,7 @@
 return array (
   '<strong>Birthdays</strong> within the next {days} days' => '<strong>Anniversaires</strong> dans les {days} prochains jours',
   'Back to modules' => 'Retour aux modules',
-  'Birthday Module Configuration' => 'Configuration du module Anniversaire',
+  'Birthday Module Configuration' => 'Configuration du module <strong>anniversaires</strong>',
   'In {days} days' => 'Dans {days} jours',
   'Save' => 'Enregistrer',
   'The group id of the group that should be exluded.' => 'L\'ID du groupe qui doit être exclu.',
