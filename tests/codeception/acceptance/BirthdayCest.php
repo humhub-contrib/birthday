@@ -24,18 +24,17 @@ class BirthdayCest
         
         $I->amUser();
         AccountSettingsPage::openBy($I);
-       
-        $date = date('m/d').'/'.'87';
-        $I->fillField('Profile[birthday]', $date);
+
+        $birthday = (new \DateTime())->sub(new \DateInterval('P29Y'))->format('m/d/y');
+        $I->fillField('Profile[birthday]', $birthday);
         $I->click('Save profile');
-        
         $I->wait(2);
         
         $I->amGoingTo('check my birthday widget on the dashboard');
         DashboardPage::openBy($I);
         $I->expectTo('see myself in the birthday widget');
         $I->seeElement('#birthdayContent');
-        $I->see('User1', '#birthdayContent');
+        $I->see('Peter Tester', '#birthdayContent');
     }
 
 }
