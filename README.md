@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/humhub/humhub-modules-birthday.svg?branch=master)](https://travis-ci.org/humhub/humhub-modules-birthday)
+
 ## Description
 
 This widget showing upcoming birthdays on dashboard
