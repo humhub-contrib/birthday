@@ -17,11 +17,11 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Birthday Module Configuration' => '',
-    'The group id of the group that should be exluded.' => '',
-    'The number of days future birthdays will be shown within.' => '',
-    'You may configure the number of days within the upcoming birthdays are shown.' => '',
-    '<strong>Birthdays</strong> within the next {days} days' => '<strong>Születésnap </strong>a következő {days} napban',
+    'Birthday Module Configuration' => 'Születésnap Modul Beállítások',
+    'The group id of the group that should be exluded.' => 'A csoport azonosítója (id) akiket szeretnél kizárni ebből',
+    'The number of days future birthdays will be shown within.' => 'Születésnapi figyelmeztetés mutatása ennyi nappal előtte',
+    'You may configure the number of days within the upcoming birthdays are shown.' => 'Állítsd be hány nappal a születésnapok előtt legyen értesítés',
+    '<strong>Birthdays</strong> within the next {days} days' => '<strong>Születésnapok </strong>a következő {days} napban',
     'Back to modules' => 'Vissza a modulokhoz',
     'In {days} days' => '{days} múlva',
     'Save' => 'Mentés',
