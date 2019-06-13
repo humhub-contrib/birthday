@@ -1,17 +1,23 @@
 {
     "id": "birthday",
     "name": "Birthday Widget",
-    "description": "This widget showing upcoming birthdays on dashboard.",
-    "keywords": ["birthday", "widget", "dashboard"],
+    "description": "This module provides a dashboard widget showing upcoming birthdays.",
+    "keywords": [
+        "birthday",
+        "widget",
+        "dashboard"
+    ],
     "version": "1.0.13",
     "humhub": {
         "minVersion": "0.20"
     },
-    "homepage": "https://github.com/humhub/humhub-modules-birthday",    
+    "homepage": "https://github.com/humhub/humhub-modules-birthday",
     "authors": [
         {
             "name": "Sebastian Stumpf"
         }
-    ],    
-    "screenshots": ["assets/screen1.png"]
+    ],
+    "screenshots": [
+        "assets/screen1.png"
+    ]
 }
