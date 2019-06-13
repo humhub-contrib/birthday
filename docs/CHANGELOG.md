@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.0.14 - June 14, 2019
+------------------------
+- Enh: Updated translations
+- Enh: Improved module docs
+
+
 1.0.13 - January 2, 2018
 ------------------------
 - Fix: Removed day string from time calculation

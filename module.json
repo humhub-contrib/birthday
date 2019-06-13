@@ -7,9 +7,9 @@
         "widget",
         "dashboard"
     ],
-    "version": "1.0.13",
+    "version": "1.0.14",
     "humhub": {
-        "minVersion": "0.20"
+        "minVersion": "1.0"
     },
     "homepage": "https://github.com/humhub/humhub-modules-birthday",
     "authors": [
