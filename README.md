@@ -1,13 +1,11 @@
 [![Build Status](https://travis-ci.org/humhub/humhub-modules-birthday.svg?branch=master)](https://travis-ci.org/humhub/humhub-modules-birthday)
 
-## Description
+# Birthday Widget
 
-This widget showing upcoming birthdays on dashboard
+Show your appreciation to your colleagues and brighten their day with warm wishes.
 
-### Features:
+## Feature Overview
 
-- Set number of days future bithdays will be shown within
-- Users can hide their year of birth / age</li></ul>
-
-__Author:__ Sebastian Stumpf
-__Author website:__ [www.zeros.ones.de](http://www.zeros.ones.de)
+- Adds a widget to your dashboard with upcoming birthdays
+- Period for which the upcoming birthdays should be displayed is configurable
+- Users can hide their year of birth / age
