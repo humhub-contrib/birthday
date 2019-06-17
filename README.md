@@ -2,9 +2,10 @@
 
 # Birthday Widget
 
-This module provides a dashboard widget showing upcoming birthdays.
+Show your appreciation to your colleagues and brighten their day with warm wishes.
 
 ## Feature Overview
 
-- Set number of days future bithdays will be shown within
+- Adds a widget to your dashboard with upcoming birthdays
+- Period for which the upcoming birthdays should be displayed is configurable
 - Users can hide their year of birth / age

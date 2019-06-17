@@ -1,7 +1,7 @@
 {
     "id": "birthday",
     "name": "Birthday Widget",
-    "description": "This module provides a dashboard widget showing upcoming birthdays.",
+    "description": "Adds a widget to the dashbaord showing upcoming birthdays.",
     "keywords": [
         "birthday",
         "widget",
@@ -18,6 +18,8 @@
         }
     ],
     "screenshots": [
-        "assets/screen1.png"
+        "assets/screen1.png",
+        "assets/screen2.png",
+        "assets/screen3.png"
     ]
 }
