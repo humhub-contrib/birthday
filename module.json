@@ -11,7 +11,7 @@
     "humhub": {
         "minVersion": "1.0"
     },
-    "homepage": "https://github.com/humhub/humhub-modules-birthday",
+    "homepage": "https://github.com/humhub-contrib/birthday",
     "authors": [
         {
             "name": "Sebastian Stumpf"
