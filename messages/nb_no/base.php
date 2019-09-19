@@ -9,6 +9,6 @@ return array (
   'The number of days future birthdays will be shown within.' => 'Antall dager fremtidige fødselsdager vil bli synlige.',
   'Tomorrow' => 'I morgen',
   'You may configure the number of days within the upcoming birthdays are shown.' => 'Du kan konfigerere antall dager å vise bursdager innenfor.',
-  'becomes {years} years old.' => 'blir {years} gammel.',
+  'becomes {years} years old.' => 'blir {years} år gammel.',
   'today' => 'i dag',
 );
