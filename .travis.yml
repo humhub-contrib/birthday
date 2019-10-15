@@ -20,7 +20,7 @@ env:
     - HUMHUB_PATH=/opt/humhub
   matrix:
     - HUMHUB_VERSION=develop
- 
+
 
 matrix:
   allow_failures:
