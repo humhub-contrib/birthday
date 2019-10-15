@@ -5,6 +5,6 @@
 return [
     'params' => [
         #'moduleAutoloadPaths' => ['...'],
-        'allowedLanguages' => ['en']
+        #'allowedLanguages' => ['en']
     ]
 ];

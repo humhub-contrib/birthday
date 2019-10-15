@@ -5,6 +5,7 @@ namespace birthday\acceptance;
 use birthday\AcceptanceTester;
 use tests\codeception\_pages\AccountSettingsPage;
 use tests\codeception\_pages\DashboardPage;
+use WebDriverKeys;
 use Yii;
 
 class BirthdayCest
@@ -27,6 +28,8 @@ class BirthdayCest
 
         $birthday = (new \DateTime())->sub(new \DateInterval('P29Y'))->format('m/d/y');
         $I->fillField('Profile[birthday]', $birthday);
+        $I->pressKey('#profile-birthday',WebDriverKeys::ENTER);
+        $I->wait(1);
         $I->click('Save profile');
         $I->wait(2);
         

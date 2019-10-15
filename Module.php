@@ -32,7 +32,7 @@ class Module extends \humhub\components\Module
         }
         
         $module = Yii::$app->getModule('birthday');
-        $event->sender->addWidget(BirthdaySidebarWidget::className(), array(), array('sortOrder' => $module->sidebarSortOrder));
+        $event->sender->addWidget(BirthdaySidebarWidget::class, [], ['sortOrder' => $module->sidebarSortOrder]);
     }
 
     /**
