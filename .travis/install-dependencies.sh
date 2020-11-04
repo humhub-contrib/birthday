@@ -9,4 +9,4 @@ CHROMEDRIVER_VERSION=`curl -s "https://chromedriver.storage.googleapis.com/LATES
 
 curl "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip" -O \
     && unzip -o -d $HOME chromedriver_linux64.zip \
-	&& chmod +x $HOME/chromedriver
+	  && chmod +x $HOME/chromedriver
