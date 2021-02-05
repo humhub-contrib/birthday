@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/humhub/humhub-modules-birthday.svg?branch=master)](https://travis-ci.org/humhub/humhub-modules-birthday)
+[![Test Status](https://github.com/humhub-contrib/birthday/workflows/PHP%20Codeception%20Tests/badge.svg)](https://github.com/humhub-contrib/birthday/actions)
 
 # Birthday Widget
 
