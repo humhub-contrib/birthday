@@ -3,9 +3,9 @@
 namespace birthday\acceptance;
 
 use birthday\AcceptanceTester;
+use Facebook\WebDriver\WebDriverKeys;
 use tests\codeception\_pages\AccountSettingsPage;
 use tests\codeception\_pages\DashboardPage;
-use WebDriverKeys;
 use Yii;
 
 class BirthdayCest
@@ -26,8 +26,8 @@ class BirthdayCest
         $I->amUser();
         AccountSettingsPage::openBy($I);
 
-        $birthday = (new \DateTime())->sub(new \DateInterval('P29Y'))->format('m/d/y');
-        $I->fillField('Profile[birthday]', $birthday);
+        $birthday = (new \DateTime())->sub(new \DateInterval('P29Y'))->format('Y-m-d');
+        $I->fillField('Profile[birthday]', Yii::$app->formatter->asDate($birthday));
         $I->pressKey('#profile-birthday',WebDriverKeys::ENTER);
         $I->wait(1);
         $I->click('Save profile');

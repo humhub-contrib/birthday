@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.0.15 - Unreleased
+------------------------
+- Fix #25: Fix tests
+
+
 1.0.14 - June 14, 2019
 ------------------------
 - Enh: Updated translations
