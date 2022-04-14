@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.0.15 - Unreleased
-------------------------
+1.0.15 - April 14, 2022
+-----------------------
 - Fix #25: Fix tests
 - Enh #4823: Remove CHTML/CActiveForm usages
 
