@@ -9,6 +9,6 @@ return array (
   'The number of days future birthdays will be shown within.' => 'O intervalo do número de dias para futuros aniversários.',
   'Tomorrow' => 'Amanhã',
   'You may configure the number of days within the upcoming birthdays are shown.' => 'Podes configurar como é mostrado o número de dias de entre os próximos aniversários.',
-  'becomes {years} years old.' => 'terá {years} de idade.',
+  'becomes {years} years old.' => 'terá {years} anos de idade.',
   'today' => 'hoje',
 );
