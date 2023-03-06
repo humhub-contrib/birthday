@@ -14,7 +14,10 @@ use Yii;
  */
 class BirthdayCest
 {
-    public ?Module $module;
+    /**
+     * @var Module
+     */
+    public $module;
 
     public function _before()
     {
