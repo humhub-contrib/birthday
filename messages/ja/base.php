@@ -1,6 +1,6 @@
 <?php
 return array (
-  '<strong>Birthdays</strong> within the next {days} days' => '次の{days}の日以内に<strong>誕生日 strong&gt;</strong>',
+  '<strong>Birthdays</strong> within the next {days} days' => '今後 {days} 日以内の<strong>誕生日</strong>',
   'Back to modules' => 'モジュールへ戻る',
   'Birthday Module Configuration' => '誕生日モジュールの設定',
   'In {days} days' => '{days}日以内',
