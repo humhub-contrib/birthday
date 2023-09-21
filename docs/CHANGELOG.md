@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.0.16 - Unreleased
+-----------------------
+- Enh #36: Tests for `next` version
+
 1.0.15 - April 14, 2022
 -----------------------
 - Fix #25: Fix tests
