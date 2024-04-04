@@ -1,7 +1,7 @@
 <?php
 return array (
   '<strong>Birthdays</strong> within the next {days} days' => '',
-  'Back to modules' => '',
+  'Back to modules' => 'Itzuli moduluetara',
   'Birthday Module Configuration' => '',
   'In {days} days' => '',
   'Save' => 'Gorde',
