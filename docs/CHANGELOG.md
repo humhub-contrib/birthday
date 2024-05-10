@@ -4,6 +4,7 @@ Changelog
 1.0.16 - Unreleased
 -----------------------
 - Enh #36: Tests for `next` version
+- Fix #37: Set module resources path
 
 1.0.15 - April 14, 2022
 -----------------------
