@@ -1,7 +1,7 @@
 {
     "id": "birthday",
     "name": "Birthday Widget",
-    "description": "Adds a widget to the dashbaord showing upcoming birthdays.",
+    "description": "Adds a widget to the dashboard showing upcoming birthdays.",
     "keywords": [
         "birthday",
         "widget",
@@ -9,7 +9,7 @@
     ],
     "version": "1.1.0",
     "humhub": {
-        "minVersion": "1.16"
+        "minVersion": "1.17"
     },
     "homepage": "https://github.com/humhub-contrib/birthday",
     "authors": [
