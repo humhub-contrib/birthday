@@ -18,8 +18,8 @@
         }
     ],
     "screenshots": [
-        "assets/screen1.PNG",
-        "assets/screen2.PNG",
-        "assets/screen3.PNG"
+        "resources/screen1.PNG",
+        "resources/screen2.PNG",
+        "resources/screen3.PNG"
     ]
 }
