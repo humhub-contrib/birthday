@@ -10,7 +10,7 @@ use yii\helpers\Html;
  * @package humhub.modules.birthday.widgets.views
  * @author Sebastian Stumpf
  */
-$assets = \humhub\modules\birthday\Assets::register($this);
+$assets = \humhub\modules\birthday\assets\Assets::register($this);
 ?>
 
 <div class="panel panel-default panel-birthday" id="panel-birthday">

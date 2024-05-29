@@ -1,5 +1,6 @@
 <?php
 
+use humhub\modules\birthday\Events;
 use humhub\modules\dashboard\widgets\Sidebar;
 
 return [
@@ -7,7 +8,6 @@ return [
     'class' => 'humhub\modules\birthday\Module',
     'namespace' => 'humhub\modules\birthday',
     'events' => [
-        array('class' => Sidebar::class, 'event' => Sidebar::EVENT_INIT, 'callback' => array('humhub\modules\birthday\Module', 'onSidebarInit')),
+        ['class' => Sidebar::class, 'event' => Sidebar::EVENT_INIT, 'callback' => [Events::class, 'onDashboardSidebarInit']],
     ],
 ];
-?>
