@@ -13,7 +13,6 @@ use humhub\models\Setting;
  */
 class ConfigController extends \humhub\modules\admin\components\Controller
 {
-
     /**
      * Configuration Action for Super Admins
      */
@@ -28,9 +27,7 @@ class ConfigController extends \humhub\modules\admin\components\Controller
             return $this->redirect(['/birthday/config']);
         }
 
-        return $this->render('index', array('model' => $form));
+        return $this->render('index', ['model' => $form]);
     }
 
 }
-
-?>
