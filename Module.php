@@ -9,7 +9,7 @@ use yii\helpers\Url;
 
 /**
  * BirthdayModule is responsible for the the birthday functions.
- * 
+ *
  * @author Sebastian Stumpf
  */
 class Module extends \humhub\components\Module
@@ -23,7 +23,7 @@ class Module extends \humhub\components\Module
      * @var int the sort order for the birthdays sidebar widget
      */
     public $sidebarSortOrder = 200;
-    
+
     /**
      * On build of the dashboard sidebar widget, add the birthday widget if module is enabled.
      *
@@ -34,7 +34,7 @@ class Module extends \humhub\components\Module
         if (Yii::$app->user->isGuest) {
             return;
         }
-        
+
         $module = Yii::$app->getModule('birthday');
         $event->sender->addWidget(BirthdaySidebarWidget::class, [], ['sortOrder' => $module->sidebarSortOrder]);
     }
@@ -57,5 +57,3 @@ class Module extends \humhub\components\Module
     }
 
 }
-
-?>

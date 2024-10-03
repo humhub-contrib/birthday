@@ -12,7 +12,6 @@ use Yii;
  */
 class BirthdayConfigureForm extends \yii\base\Model
 {
-
     public $shownDays;
     public $excludedGroup;
 
@@ -21,11 +20,11 @@ class BirthdayConfigureForm extends \yii\base\Model
      */
     public function rules()
     {
-        return array(
-            array('shownDays', 'required'),
-            array('shownDays', 'integer', 'min' => 0, 'max' => 90),
-            array('excludedGroup', 'integer', 'min' => 1, 'max' => 1000000),
-        );
+        return [
+            ['shownDays', 'required'],
+            ['shownDays', 'integer', 'min' => 0, 'max' => 90],
+            ['excludedGroup', 'integer', 'min' => 1, 'max' => 1000000],
+        ];
     }
 
     /**
@@ -35,10 +34,10 @@ class BirthdayConfigureForm extends \yii\base\Model
      */
     public function attributeLabels()
     {
-        return array(
+        return [
             'shownDays' => Yii::t('BirthdayModule.base', 'The number of days future birthdays will be shown within.'),
             'excludedGroup' => Yii::t('BirthdayModule.base', 'The group id of the group that should be exluded.'),
-        );
+        ];
     }
 
 }

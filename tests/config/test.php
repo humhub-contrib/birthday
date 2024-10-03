@@ -3,8 +3,5 @@
 return [
     #'humhub_root' => '...',
     'modules' => ['birthday'],
-    'fixtures' => ['default']
+    'fixtures' => ['default'],
 ];
-
-
-
