@@ -6,6 +6,8 @@ Changelog
 - Enh #36: Tests for `next` version
 - Fix #37: Set module resources path
 - Enh #39: Use PHP CS Fixer
+- Fix #40: Resources path for HumHub v1.17
+
 
 1.0.15 - April 14, 2022
 -----------------------
