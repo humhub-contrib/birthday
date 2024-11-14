@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.0.16 - Unreleased
------------------------
+1.0.16 - November 14, 2024 
+---------------------------
 - Enh #36: Tests for `next` version
 - Fix #37: Set module resources path
 - Enh #39: Use PHP CS Fixer
