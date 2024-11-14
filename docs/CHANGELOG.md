@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0.17 - Unreleased
+1.0.17 (Unreleased)
 ---------------------------
 - Fix #41: Fix module resources path
 
