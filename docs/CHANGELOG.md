@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.0.18 (February 13, 2025)
+---------------------------
+- Fix: Collapsible sidebar
+
 1.0.17 (November 14, 2024)
 ---------------------------
 - Fix #41: Fix module resources path
