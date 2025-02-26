@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0.18 (February 13, 2025)
+1.0.18 (February 26, 2025)
 ---------------------------
 - Fix: Collapsible sidebar
 
