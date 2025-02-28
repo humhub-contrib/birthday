@@ -7,7 +7,7 @@
         "widget",
         "dashboard"
     ],
-    "version": "1.0.18",
+    "version": "1.0.19",
     "humhub": {
         "minVersion": "1.8"
     },

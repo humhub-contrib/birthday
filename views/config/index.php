@@ -20,11 +20,15 @@ use yii\helpers\Url;
         <?php $form = ActiveForm::begin(); ?>
 
         <div class="form-group">
-            <?php echo $form->field($model, 'shownDays')->textInput(); ?>
+            <?= $form->field($model, 'enabled')->checkbox(); ?>
         </div>
 
         <div class="form-group">
-            <?php echo $form->field($model, 'excludedGroup')->textInput(); ?>
+            <?= $form->field($model, 'shownDays')->textInput(); ?>
+        </div>
+
+        <div class="form-group">
+            <?= $form->field($model, 'excludedGroup')->textInput(); ?>
         </div>
 
         <hr>
