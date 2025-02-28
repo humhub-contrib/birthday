@@ -17,7 +17,7 @@ class Module extends \humhub\components\Module
     /**
      * @inheritdoc
      */
-    public $resourcesPath = 'assets';
+    public $resourcesPath = 'resources';
 
     /**      *
      * @var int the sort order for the birthdays sidebar widget
