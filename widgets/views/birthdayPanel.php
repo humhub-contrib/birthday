@@ -18,7 +18,7 @@ $enabled = (bool) Yii::$app->getModule('birthday')->settings->get('enabled');
         <ul id="birthdayList" class="media-list">
             <?php foreach ($users as $user): ?>
                 <?php $remainingDays = $this->context->getDays($user); ?>
-                
+
                 <li class="birthdayEntry">
                     <?php if ($enabled): ?>
                         <div class="media">
@@ -30,16 +30,14 @@ $enabled = (bool) Yii::$app->getModule('birthday')->settings->get('enabled');
                                 <img class="media-object img-rounded pull-left"
                                      style="width: 32px; height: 32px;"
                                      src="<?= $user->getProfileImage()->getUrl(); ?>">
-
                                 <?php if ($remainingDays == 0): ?>
                                     <img class="media-object img-rounded img-birthday pull-left"
                                          style="width: 16px; height: 16px;"
                                          src="<?= $assets->baseUrl ?>/cake.png">
                                 <?php endif; ?>
-
                                 <div class="media-body">
                                     <strong><?= Html::encode($user->displayName); ?></strong>
-                                    
+
                                     <?php
                                     if ($remainingDays == 0) {
                                         echo ' <span class="label label-danger pull-right">' . Yii::t('BirthdayModule.base', 'today') . '</span>';
@@ -48,7 +46,6 @@ $enabled = (bool) Yii::$app->getModule('birthday')->settings->get('enabled');
                                     } else {
                                         echo ' <span class="label label-info pull-right">' . Yii::t('BirthdayModule.base', '{days} days ago', ['days' => abs($remainingDays)]) . '</span>';
                                     }
-
                                     if ($user->profile->birthday_hide_year == '0') {
                                         echo '<br />' . Yii::t('BirthdayModule.base', $remainingDays < 0 ? 'turned {years} years old.' : 'becomes {years} years old.', ['years' => $this->context->getAge($user)]);
                                     }
