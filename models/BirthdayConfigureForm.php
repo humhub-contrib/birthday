@@ -3,6 +3,7 @@
 namespace humhub\modules\birthday\models;
 
 use Yii;
+use yii\base\Model;
 use humhub\modules\birthday\Module;
 
 /**
@@ -11,16 +12,11 @@ use humhub\modules\birthday\Module;
  * @package humhub.modules.birthday.forms
  * @author Sebastian Stumpf
  */
-class BirthdayConfigureForm extends \yii\base\Model
+class BirthdayConfigureForm extends Model
 {
     public $enabled;
     public $shownDays;
     public $excludedGroup;
-
-    /**
-     * @var Module
-     */
-    private $module;
 
     /**
      * Declares the validation rules.
@@ -37,14 +33,12 @@ class BirthdayConfigureForm extends \yii\base\Model
 
     /**
      * Declares customized attribute labels.
-     * If not declared here, an attribute would have a label that is
-     * the same as its name with the first letter in upper case.
      */
     public function attributeLabels()
     {
         return [
             'shownDays' => Yii::t('BirthdayModule.base', 'The number of days future birthdays will be shown within.'),
-            'excludedGroup' => Yii::t('BirthdayModule.base', 'The group id of the group that should be exluded.'),
+            'excludedGroup' => Yii::t('BirthdayModule.base', 'The group id of the group that should be excluded.'),
             'enabled' => Yii::t('BirthdayModule.base', 'Disable modal on clicking users within birthday widget.'),
         ];
     }
@@ -54,11 +48,12 @@ class BirthdayConfigureForm extends \yii\base\Model
      */
     public function loadSettings()
     {
-        /** @var Module $module */
         $module = Yii::$app->getModule('birthday');
         $settings = $module->settings;
 
-        $this->enabled = (boolean)$settings->get('enabled', false);
+        $this->enabled = (bool) $settings->get('enabled', false);
+        $this->shownDays = (int) $settings->get('shownDays', 7);
+        $this->excludedGroup = (int) $settings->get('excludedGroup', null);
     }
 
     /**
@@ -66,11 +61,12 @@ class BirthdayConfigureForm extends \yii\base\Model
      */
     public function save()
     {
-        /** @var Module $module */
         $module = Yii::$app->getModule('birthday');
         $settings = $module->settings;
 
-        $settings->set('enabled', (boolean)$this->enabled);
+        $settings->set('enabled', (bool) $this->enabled);
+        $settings->set('shownDays', (int) $this->shownDays);
+        $settings->set('excludedGroup', (int) $this->excludedGroup);
 
         return true;
     }
