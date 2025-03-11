@@ -3,7 +3,8 @@
 namespace humhub\modules\birthday\widgets;
 
 use Yii;
-use humhub\models\Setting;
+use yii\base\Widget;
+use yii\helpers\Html;
 use humhub\modules\user\models\User;
 
 /**
@@ -13,12 +14,15 @@ use humhub\modules\user\models\User;
  *
  * @package humhub.modules.birthday.widgets
  */
-class BirthdaySidebarWidget extends \yii\base\Widget
+class BirthdaySidebarWidget extends Widget
 {
     public function run()
     {
-        $range = (int) Setting::Get('shownDays', 'birthday');
-        $excludedGroup = (int) Setting::Get('excludedGroup', 'birthday');
+        $module = Yii::$app->getModule('birthday');
+        $settings = $module->settings;
+
+        $range = (int) $settings->get('shownDays', 7);
+        $excludedGroup = (int) $settings->get('excludedGroup', 0);
         $exclusionSql = "";
 
         if ($excludedGroup > 0) {
