@@ -3,31 +3,27 @@
 namespace humhub\modules\birthday;
 
 use Yii;
-use humhub\modules\birthday\widgets\BirthdaySidebarWidget;
-use humhub\models\Setting;
 use yii\helpers\Url;
-
+use humhub\components\Module as BaseModule;
 /**
- * BirthdayModule is responsible for the the birthday functions.
- *
- * @author Sebastian Stumpf
+ * BirthdayModule is responsible for the birthday functions.
  */
-class Module extends \humhub\components\Module
+class Module extends BaseModule
 {
     /**
      * @inheritdoc
      */
     public $resourcesPath = 'resources';
 
-    /**      *
-     * @var int the sort order for the birthdays sidebar widget
+    /**
+     * @var int The sort order for the birthdays sidebar widget.
      */
     public $sidebarSortOrder = 200;
 
     /**
-     * On build of the dashboard sidebar widget, add the birthday widget if module is enabled.
+     * On build of the dashboard sidebar widget, add the birthday widget if the module is enabled.
      *
-     * @param type $event
+     * @param \yii\base\Event $event
      */
     public static function onSidebarInit($event)
     {
@@ -36,7 +32,7 @@ class Module extends \humhub\components\Module
         }
 
         $module = Yii::$app->getModule('birthday');
-        $event->sender->addWidget(BirthdaySidebarWidget::class, [], ['sortOrder' => $module->sidebarSortOrder]);
+        $event->sender->addWidget(widgets\BirthdaySidebarWidget::class, [], ['sortOrder' => $module->sidebarSortOrder]);
     }
 
     /**
@@ -53,7 +49,6 @@ class Module extends \humhub\components\Module
     public function enable()
     {
         parent::enable();
-        Setting::Set('shownDays', 2, 'birthday');
+        $this->settings->set('shownDays', 2);
     }
-
 }
