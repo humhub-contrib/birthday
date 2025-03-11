@@ -1,0 +1,104 @@
+.birthday-today {
+    background-color: rgba(255, 240, 240, 0.5);
+    border-radius: 4px;
+    padding: 10px;
+    position: relative;
+}
+
+.media-left {
+    position: relative;
+    padding-right: 15px;
+}
+
+.profile-link {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.media-object {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #eee;
+}
+
+.birthday-today-badge {
+    position: absolute;
+    bottom: -5px;
+    left: -5px;
+    padding: 3px 5px;
+    font-size: 10px;
+    z-index: 2;
+}
+
+.img-birthday {
+    position: absolute;
+    top: 32px;
+    left: 30px;
+}
+
+.past-birthday {
+    cursor: pointer;
+}
+
+.birthday-details {
+    margin-top: 10px;
+}
+
+.detail-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.detail-row .text-muted {
+    margin-right: 5px;
+}
+
+.detail-row strong {
+    margin-right: 5px;
+}
+
+.age-label {
+    margin-left: 5px;
+}
+
+.leap-day-label {
+    margin-left: 5px;
+}
+
+.modal-header .fa-birthday-cake {
+    color: #f0ad4e;
+    margin-right: 5px;
+}
+
+.empty-icon {
+    margin-bottom: 15px;
+}
+
+.empty-text {
+    font-size: 16px;
+    color: #777;
+}
+
+.birthday-separator {
+    margin: 15px 0;
+    border-top: 1px solid #eee;
+}
+
+@media (max-width: 767px) {
+    .col-md-6 {
+        margin-bottom: 8px;
+    }
+    
+    .detail-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .detail-row .text-muted {
+        margin-bottom: 3px;
+    }
+}
