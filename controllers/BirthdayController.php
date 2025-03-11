@@ -4,8 +4,8 @@ namespace humhub\modules\birthday\controllers;
 
 use Yii;
 use humhub\components\Controller;
-use humhub\modules\birthday\Module;
 use humhub\modules\user\models\User;
+use humhub\modules\birthday\models\BirthdayConfigureForm;
 
 class BirthdayController extends Controller
 {
@@ -14,17 +14,18 @@ class BirthdayController extends Controller
      */
     public function actionIndex()
     {
-        // Get the range of days to show upcoming birthdays
-        $range = (int) \humhub\models\Setting::Get('shownDays', 'birthday');
-        
-        // Fetch users having birthdays in the next $range days
+        $config = new BirthdayConfigureForm();
+        $config->loadSettings();
+
+        $range = (int) $config->shownDays;
+
         $birthdayUsers = User::find()
             ->joinWith('profile')
             ->where(['>', 'profile.birthday', new \yii\db\Expression('CURDATE()')])
             ->andWhere(['<=', 'profile.birthday', new \yii\db\Expression('DATE_ADD(CURDATE(), INTERVAL :range DAY)', [':range' => $range])])
             ->limit(10)
             ->all();
-        
+
         return $this->render('index', [
             'users' => $birthdayUsers,
             'dayRange' => $range,
@@ -39,26 +40,30 @@ class BirthdayController extends Controller
      */
     public function actionModalProfile($userId)
     {
-        // Fetch the user based on the user ID passed in the URL
         $user = User::findOne(['id' => $userId]);
 
-        // Check if the user exists
         if (!$user) {
-            // If the user does not exist, show an error message
             return Yii::t('BirthdayModule.base', 'User not found.');
         }
 
-        // Render the profile modal with the user data
         return $this->renderAjax('profileModal', [
             'user' => $user
         ]);
     }
 
-    public function getAge($user)
+    /**
+     * Get the age of a user based on their profile birthday.
+     *
+     * @param User $user
+     * @return int|null Age or null if no birthday set
+     */
+    public function getAge(User $user): ?int
     {
-        $birthday = new \DateTime($user->profile->birthday);
-        $age = $birthday->diff(new \DateTime('now'))->y;
+        if (empty($user->profile->birthday)) {
+            return null;
+        }
 
-        return $age;
+        $birthday = new \DateTime($user->profile->birthday);
+        return $birthday->diff(new \DateTime('now'))->y;
     }
 }
