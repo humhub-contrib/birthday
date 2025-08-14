@@ -1,8 +1,9 @@
 <?php
 
-use humhub\modules\ui\form\widgets\ActiveForm;
+use humhub\widgets\form\ActiveForm ;
 use yii\helpers\Html;
 use yii\helpers\Url;
+use humhub\widgets\bootstrap\Button;
 
 /**
  * @var $model \humhub\modules\birthday\models\BirthdayConfigureForm
@@ -19,20 +20,19 @@ use yii\helpers\Url;
 
         <?php $form = ActiveForm::begin(); ?>
 
-        <div class="form-group">
+        <div class="mb-3">
             <?php echo $form->field($model, 'shownDays')->textInput(); ?>
         </div>
 
-        <div class="form-group">
+        <div class="mb-3">
             <?php echo $form->field($model, 'excludedGroup')->textInput(); ?>
         </div>
 
         <hr>
-        <?= Html::submitButton(Yii::t('BirthdayModule.base', 'Save'), ['class' => 'btn btn-primary']); ?>
-        <a class="btn btn-default" href="<?= Url::to(['/admin/module']); ?>">
-            <?= Yii::t('BirthdayModule.base', 'Back to modules'); ?>
-        </a>
-
+        <?= Button::save()->submit() ?>
+        <?= Button::light(Yii::t('BirthdayModule.base', 'Back to modules'))
+                ->link(Url::to(['/admin/module']))
+                ->cssClass('float-end') ?>
         <?php $form::end(); ?>
     </div>
 </div>
