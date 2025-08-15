@@ -35,8 +35,8 @@ class BirthdayCest
         $I->amGoingTo('check my birthday widget on the dashboard');
         DashboardPage::openBy($I);
         $I->expectTo('see myself in the birthday widget');
-        $I->seeElement('#birthdayContent');
-        $I->see('Peter Tester', '#birthdayContent');
+        $I->seeElement('#birthdayList');
+        $I->see('Peter Tester', '#birthdayList');
     }
 
 }
