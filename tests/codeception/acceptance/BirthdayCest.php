@@ -27,6 +27,7 @@ class BirthdayCest
 
         $birthday = (new \DateTime())->sub(new \DateInterval('P29Y'))->format('Y-m-d');
         $I->fillField('Profile[birthday]', Yii::$app->formatter->asDate($birthday));
+        $I->wait(1);
         $I->pressKey('#profile-birthday', WebDriverKeys::ENTER);
         $I->wait(1);
         $I->click('Save profile');
