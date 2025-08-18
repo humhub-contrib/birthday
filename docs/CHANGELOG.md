@@ -1,6 +1,8 @@
 Changelog
 =========
-1.1.0 TBA
+
+1.1.0 (August 18, 2025)
+-----------------------
 - Enh #47: Migration to Bootstrap 5 for HumHub 1.18
 
 1.0.18 (February 26, 2025)
