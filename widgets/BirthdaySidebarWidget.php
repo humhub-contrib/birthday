@@ -16,7 +16,6 @@ use humhub\models\Setting;
  */
 class BirthdaySidebarWidget extends \yii\base\Widget
 {
-
     public function run()
     {
         $range = (int) Setting::Get('shownDays', 'birthday');
@@ -42,10 +41,10 @@ class BirthdaySidebarWidget extends \yii\base\Widget
             return;
         }
 
-        return $this->render('birthdayPanel', array(
-                    'users' => $users,
-                    'dayRange' => $range
-        ));
+        return $this->render('birthdayPanel', [
+            'users' => $users,
+            'dayRange' => $range,
+        ]);
     }
 
     public function getDays($user)
@@ -79,5 +78,3 @@ class BirthdaySidebarWidget extends \yii\base\Widget
     }
 
 }
-
-?>

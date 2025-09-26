@@ -1,10 +1,30 @@
 Changelog
 =========
 
-1.1.0 - Unreleased
------------------------
-- Enh #36: Tests for `next` version
+
+1.1.1 (Unreleased)
+------------------
 - Fix #37: Update module resources path
+
+1.1.0 (August 18, 2025)
+-----------------------
+- Enh #47: Migration to Bootstrap 5 for HumHub 1.18
+
+1.0.18 (February 26, 2025)
+---------------------------
+- Fix: Collapsible sidebar
+
+1.0.17 (November 14, 2024)
+---------------------------
+- Fix #41: Fix module resources path
+
+1.0.16 - November 14, 2024 
+---------------------------
+- Enh #36: Tests for `next` version
+- Fix #37: Set module resources path
+- Enh #39: Use PHP CS Fixer
+- Fix #40: Resources path for HumHub v1.17
+
 
 1.0.15 - April 14, 2022
 -----------------------

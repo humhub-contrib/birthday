@@ -14,24 +14,23 @@ use yii\helpers\Url;
  */
 class BirthdayHelper extends Module
 {
-
     public function seeTermsbox()
     {
         $this->assertTrue(Yii::$app->getModule('termsbox')->showTermsbox());
     }
-    
+
     public function dontSeeTermsbox()
     {
         $this->assertFalse(Yii::$app->getModule('termsbox')->showTermsbox());
     }
-    
+
     public function acceptTermsbox()
     {
-         $this->getModule('Yii2')->sendAjaxPostRequest('index-test.php?r=/termsbox/index/accept');
+        $this->getModule('Yii2')->sendAjaxPostRequest('index-test.php?r=/termsbox/index/accept');
     }
-    
+
     public function declineTermsbox()
-    {   
-         $this->getModule('Yii2')->amOnPage(['/termsbox/index/decline']);
+    {
+        $this->getModule('Yii2')->amOnRoute('/termsbox/index/decline');
     }
 }
