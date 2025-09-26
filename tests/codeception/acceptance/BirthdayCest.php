@@ -27,6 +27,7 @@ class BirthdayCest
 
         $birthday = (new \DateTime())->sub(new \DateInterval('P29Y'))->format('Y-m-d');
         $I->fillField('Profile[birthday]', Yii::$app->formatter->asDate($birthday));
+        $I->wait(1);
         $I->pressKey('#profile-birthday', WebDriverKeys::ENTER);
         $I->wait(1);
         $I->click('Save profile');
@@ -35,8 +36,8 @@ class BirthdayCest
         $I->amGoingTo('check my birthday widget on the dashboard');
         DashboardPage::openBy($I);
         $I->expectTo('see myself in the birthday widget');
-        $I->seeElement('#birthdayContent');
-        $I->see('Peter Tester', '#birthdayContent');
+        $I->seeElement('#birthdayList');
+        $I->see('Peter Tester', '#birthdayList');
     }
 
 }

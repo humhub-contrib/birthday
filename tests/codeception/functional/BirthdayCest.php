@@ -50,12 +50,12 @@ class BirthdayCest
         $I->amGoingTo('check my birthday widget on the dashboard');
         $I->amOnDashboard();
         $I->expectTo('see two user in the birthday widget');
-        $I->seeElement('#birthdayContent');
-        $I->see('Admin Tester', '#birthdayContent');
-        $I->see('Today', '#birthdayContent');
-        $I->see('Peter Tester', '#birthdayContent');
-        $I->see('Tomorrow', '#birthdayContent');
-        $I->dontSee('Sara', '#birthdayContent');
+        $I->seeElement('#birthdayList');
+        $I->see('Admin Tester', '#birthdayList');
+        $I->see('Today', '#birthdayList');
+        $I->see('Peter Tester', '#birthdayList');
+        $I->see('Tomorrow', '#birthdayList');
+        $I->dontSee('Sara', '#birthdayList');
     }
 
     /**
@@ -82,12 +82,12 @@ class BirthdayCest
         $I->amGoingTo('check my birthday widget on the dashboard');
         DashboardPage::openBy($I);
         $I->expectTo('see two user in the birthday widget');
-        $I->seeElement('#birthdayContent');
-        $I->see('Admin Tester', '#birthdayContent');
-        $I->see('Today', '#birthdayContent');
-        $I->see('Peter Tester', '#birthdayContent');
-        $I->see('Tomorrow', '#birthdayContent');
-        $I->dontSee('Sara', '#birthdayContent');
+        $I->seeElement('#birthdayList');
+        $I->see('Admin Tester', '#birthdayList');
+        $I->see('Today', '#birthdayList');
+        $I->see('Peter Tester', '#birthdayList');
+        $I->see('Tomorrow', '#birthdayList');
+        $I->dontSee('Sara', '#birthdayList');
     }
 
 }

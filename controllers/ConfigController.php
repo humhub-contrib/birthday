@@ -24,6 +24,7 @@ class ConfigController extends \humhub\modules\admin\components\Controller
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             $form->shownDays = Setting::Set('shownDays', $form->shownDays, 'birthday');
             $form->excludedGroup = Setting::Set('excludedGroup', $form->excludedGroup, 'birthday');
+            $this->view->saved();
             return $this->redirect(['/birthday/config']);
         }
 

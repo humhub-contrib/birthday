@@ -31,6 +31,6 @@ class BirthdayHelper extends Module
 
     public function declineTermsbox()
     {
-        $this->getModule('Yii2')->amOnPage(['/termsbox/index/decline']);
+        $this->getModule('Yii2')->amOnRoute('/termsbox/index/decline');
     }
 }
