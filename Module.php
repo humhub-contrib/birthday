@@ -2,8 +2,6 @@
 
 namespace humhub\modules\birthday;
 
-use Yii;
-use humhub\modules\birthday\widgets\BirthdaySidebarWidget;
 use humhub\models\Setting;
 use yii\helpers\Url;
 
@@ -15,11 +13,6 @@ use yii\helpers\Url;
 class Module extends \humhub\components\Module
 {
     /**
-     * @inheritdoc
-     */
-    public $resourcesPath = 'assets';
-
-    /**      *
      * @var int the sort order for the birthdays sidebar widget
      */
     public $sidebarSortOrder = 200;

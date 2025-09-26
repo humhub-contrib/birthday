@@ -1,8 +1,8 @@
 <?php
 
 use humhub\helpers\Html;
+use humhub\modules\birthday\assets\Assets;
 use humhub\widgets\PanelMenu;
-use humhub\modules\birthday\Assets;
 use humhub\widgets\bootstrap\Badge;
 
 /**
@@ -13,9 +13,7 @@ use humhub\widgets\bootstrap\Badge;
  * @package humhub.modules.birthday.widgets.views
  * @author Sebastian Stumpf
  */
-
 $assets = Assets::register($this);
-
 ?>
 <div class="panel panel-default panel-birthday" id="panel-birthday">
     <?= PanelMenu::widget(['id' => 'panel-birthday']); ?>
