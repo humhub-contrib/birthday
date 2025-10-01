@@ -5,7 +5,7 @@ Changelog
 1.1.1 (Unreleased)
 ------------------
 - Fix #37: Update module resources path
-- Fix: Assets file path
+- Fix #50: Assets file path
 
 1.1.0 (August 18, 2025)
 -----------------------
