@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-1.1.1 (Unreleased)
-------------------
+1.1.1 (October 2, 2025)
+-----------------------
 - Fix #37: Update module resources path
 - Fix #50: Assets file path
 
