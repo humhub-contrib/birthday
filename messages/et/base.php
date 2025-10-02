@@ -5,7 +5,6 @@ return [
     'Back to modules' => '',
     'Birthday Module Configuration' => '',
     'In {days} days' => '',
-    'Save' => '',
     'The group id of the group that should be exluded.' => '',
     'The number of days future birthdays will be shown within.' => '',
     'Tomorrow' => '',
