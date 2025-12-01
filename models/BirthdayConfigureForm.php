@@ -2,7 +2,9 @@
 
 namespace humhub\modules\birthday\models;
 
+use humhub\modules\birthday\Module;
 use Yii;
+use yii\base\Model;
 
 /**
  * BirthdayConfigureForm defines the configurable fields.
@@ -10,10 +12,25 @@ use Yii;
  * @package humhub.modules.birthday.forms
  * @author Sebastian Stumpf
  */
-class BirthdayConfigureForm extends \yii\base\Model
+class BirthdayConfigureForm extends Model
 {
     public $shownDays;
     public $excludedGroup;
+
+    public ?Module $module = null;
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        parent::init();
+
+        $this->module = Yii::$app->getModule('birthday');
+
+        $this->shownDays = $this->module->settings->get('shownDays');
+        $this->excludedGroup = $this->module->settings->get('excludedGroup');
+    }
 
     /**
      * Declares the validation rules.
@@ -40,4 +57,15 @@ class BirthdayConfigureForm extends \yii\base\Model
         ];
     }
 
+    public function save(): bool
+    {
+        if (!$this->validate()) {
+            return false;
+        }
+
+        $this->module->settings->set('shownDays', $this->shownDays);
+        $this->module->settings->set('excludedGroup', $this->excludedGroup);
+
+        return true;
+    }
 }
