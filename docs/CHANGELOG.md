@@ -1,6 +1,9 @@
 Changelog
 =========
 
+1.1.2 (Unreleased)
+-----------------------
+- Fix #51: Replace deprecated module setting methods
 
 1.1.1 (October 2, 2025)
 -----------------------

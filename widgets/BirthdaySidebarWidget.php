@@ -2,9 +2,10 @@
 
 namespace humhub\modules\birthday\widgets;
 
-use Yii;
+use humhub\modules\birthday\models\BirthdayConfigureForm;
 use humhub\modules\user\models\User;
-use humhub\models\Setting;
+use Yii;
+use yii\base\Widget;
 
 /**
  * BirthdaySidebarWidget displays the users of upcoming birthdays.
@@ -14,12 +15,13 @@ use humhub\models\Setting;
  * @package humhub.modules.birthday.widgets
  * @author Sebastian Stumpf
  */
-class BirthdaySidebarWidget extends \yii\base\Widget
+class BirthdaySidebarWidget extends Widget
 {
     public function run()
     {
-        $range = (int) Setting::Get('shownDays', 'birthday');
-        $excludedGroup = (int) Setting::Get('excludedGroup', 'birthday');
+        $config = new BirthdayConfigureForm();
+        $range = (int) $config->shownDays;
+        $excludedGroup = (int) $config->excludedGroup;
         $exclusionSql = "";
         if ($excludedGroup > 0) {
             $exclusionSql = "NOT profile.user_id IN (SELECT group_user.user_id FROM group_user WHERE group_user.group_id= " . $excludedGroup . ") AND ";
