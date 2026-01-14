@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.1.2 (January 14, 2026)
+1.1.3 (January 14, 2026)
 ------------------------
 - Fix #51: Replace deprecated module setting methods
 
