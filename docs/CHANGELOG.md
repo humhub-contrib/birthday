@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.1.4 (Unreleased)
+------------------------
+- Fix #55: Fix asset bundle
+
 1.1.3 (January 14, 2026)
 ------------------------
 - Fix #51: Replace deprecated module setting methods
