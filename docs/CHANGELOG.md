@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.0 (Unreleased)
+------------------------
+- Fix #56: Fix user image
+
 1.1.4 (Unreleased)
 ------------------------
 - Fix #55: Fix asset bundle
