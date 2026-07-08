@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.1.4 (Unreleased)
-------------------------
+1.1.4 (July 8, 2026)
+--------------------
 - Fix #55: Fix asset bundle
 
 1.1.3 (January 14, 2026)
