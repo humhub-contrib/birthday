@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.0 (July 31, 2026)
+---------------------
+- Fix #56: Fix user image
+
 1.1.4 (July 8, 2026)
 --------------------
 - Fix #55: Fix asset bundle
