@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.1.5 (Unreleased)
+--------------------
+- Enh #46: Option to set sort order of the sidebar widget in module configuration
+
 1.1.4 (July 8, 2026)
 --------------------
 - Fix #55: Fix asset bundle

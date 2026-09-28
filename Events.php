@@ -8,6 +8,7 @@
 
 namespace humhub\modules\birthday;
 
+use humhub\modules\birthday\models\BirthdayConfigureForm;
 use humhub\modules\birthday\widgets\BirthdaySidebarWidget;
 use humhub\modules\dashboard\widgets\Sidebar;
 use Yii;
@@ -26,11 +27,8 @@ class Events
             return;
         }
 
-        /* @var Module $module */
-        $module = Yii::$app->getModule('birthday');
-
         /* @var Sidebar $sidebar */
         $sidebar = $event->sender;
-        $sidebar->addWidget(BirthdaySidebarWidget::class, [], ['sortOrder' => $module->sidebarSortOrder]);
+        $sidebar->addWidget(BirthdaySidebarWidget::class, [], ['sortOrder' => BirthdayConfigureForm::instance()->sidebarSortOrder]);
     }
 }

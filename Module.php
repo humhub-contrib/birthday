@@ -12,11 +12,6 @@ use yii\helpers\Url;
 class Module extends \humhub\components\Module
 {
     /**
-     * @var int the sort order for the birthdays sidebar widget
-     */
-    public $sidebarSortOrder = 200;
-
-    /**
      * @inheritdoc
      */
     public function getConfigUrl()
