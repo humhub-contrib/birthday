@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.1.5 (Unreleased)
---------------------
+1.1.5 (October 12, 2026)
+------------------------
 - Enh #46: Option to set sort order of the sidebar widget in module configuration
 
 1.1.4 (July 8, 2026)
