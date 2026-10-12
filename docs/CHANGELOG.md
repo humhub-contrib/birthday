@@ -1,9 +1,13 @@
 Changelog
 =========
 
-1.1.5 (Unreleased)
+1.2.1 (Unreleased)
 --------------------
 - Enh #46: Option to set sort order of the sidebar widget in module configuration
+
+1.2.0 (July 31, 2026)
+---------------------
+- Fix #56: Fix user image
 
 1.1.4 (July 8, 2026)
 --------------------

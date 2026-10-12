@@ -2,8 +2,11 @@
 
 use humhub\helpers\Html;
 use humhub\modules\birthday\assets\Assets;
+use humhub\modules\user\models\User;
 use humhub\widgets\PanelMenu;
 use humhub\widgets\bootstrap\Badge;
+
+/* @var User[] $users */
 
 /**
  * View File for the BirthdaySidebarWidget
@@ -33,7 +36,7 @@ $assets = Assets::register($this);
                         <img class="rounded" data-src="holder.js/32x32"
                                 alt="32x32"
                                 style="width: 32px; height: 32px;"
-                                src="<?= $user->getProfileImage()->getUrl(); ?>">
+                                src="<?= $user->image->getUrl() ?>">
                         <?php if ($remainingDays == 0) : ?>
                             <img class="rounded img-birthday"
                                     data-src="holder.js/16x16" alt="16x16"
