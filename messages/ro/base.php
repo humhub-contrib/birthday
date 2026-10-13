@@ -11,4 +11,6 @@ return [
     'You may configure the number of days within the upcoming birthdays are shown.' => 'Poți configura numărul zilelor în care aniversările viitoare vor fi afișate.',
     'becomes {years} years old.' => 'implineste {years} de ani',
     'today' => 'azi',
+    'Sort order of the widget in the dashboard sidebar' => '',
+    'Widgets with a lower value are displayed higher.' => '',
 ];

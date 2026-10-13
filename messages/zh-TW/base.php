@@ -8,7 +8,9 @@ return [
     'today' => '今天',
     '<strong>Birthdays</strong> within the next {days} days' => '',
     'In {days} days' => '',
+    'Sort order of the widget in the dashboard sidebar' => '',
     'The group id of the group that should be exluded.' => '',
     'The number of days future birthdays will be shown within.' => '',
+    'Widgets with a lower value are displayed higher.' => '',
     'becomes {years} years old.' => '',
 ];

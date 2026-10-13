@@ -11,4 +11,6 @@ return [
     'You may configure the number of days within the upcoming birthdays are shown.' => 'Bạn có thể cấu hình khoảng ngày của các sinh nhật sắp tới.',
     'becomes {years} years old.' => 'Đã {years} tuổi.',
     'today' => 'hôm nay',
+    'Sort order of the widget in the dashboard sidebar' => '',
+    'Widgets with a lower value are displayed higher.' => '',
 ];

@@ -11,4 +11,6 @@ return [
     'You may configure the number of days within the upcoming birthdays are shown.' => 'يمكنك تحديد عدد الأيام التي يظهر في إشعار بقرب يوم الميلاد',
     'becomes {years} years old.' => 'يصبح عمره {years} سنة.',
     'today' => 'اليوم',
+    'Sort order of the widget in the dashboard sidebar' => '',
+    'Widgets with a lower value are displayed higher.' => '',
 ];

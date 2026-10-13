@@ -11,4 +11,6 @@ return [
     'You may configure the number of days within the upcoming birthdays are shown.' => '今後の誕生日の日数を設定することができます。',
     'becomes {years} years old.' => '{years}歳になるでしょう。',
     'today' => '今日',
+    'Sort order of the widget in the dashboard sidebar' => '',
+    'Widgets with a lower value are displayed higher.' => '',
 ];

@@ -11,4 +11,6 @@ return [
     'You may configure the number of days within the upcoming birthdays are shown.' => 'Možete konfigurirati broj dana u predstojećim rođendanima.',
     'becomes {years} years old.' => 'ima {years} godina.',
     'today' => 'danas',
+    'Sort order of the widget in the dashboard sidebar' => '',
+    'Widgets with a lower value are displayed higher.' => '',
 ];

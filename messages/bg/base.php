@@ -11,4 +11,6 @@ return [
     'You may configure the number of days within the upcoming birthdays are shown.' => 'Можете да конфигурирате броя дни, в рамките на които предстоящите рождени дни се показват.',
     'becomes {years} years old.' => 'става на {years} години.',
     'today' => 'днес',
+    'Sort order of the widget in the dashboard sidebar' => '',
+    'Widgets with a lower value are displayed higher.' => '',
 ];

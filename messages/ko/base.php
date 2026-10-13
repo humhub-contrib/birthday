@@ -11,4 +11,6 @@ return [
     'You may configure the number of days within the upcoming birthdays are shown.' => '예정된 생일이 표시되는 일 수를 구성할 수 있습니다.',
     'becomes {years} years old.' => '{years} 세가 됩니다.',
     'today' => '오늘',
+    'Sort order of the widget in the dashboard sidebar' => '',
+    'Widgets with a lower value are displayed higher.' => '',
 ];

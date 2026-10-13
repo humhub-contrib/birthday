@@ -11,4 +11,6 @@ return [
     'You may configure the number of days within the upcoming birthdays are shown.' => 'Yaklaşan doğum günlerinde gösterilen gün sayısını yapılandırabilirsiniz.',
     'becomes {years} years old.' => '{years} yaşında oldu.',
     'today' => 'bugün',
+    'Sort order of the widget in the dashboard sidebar' => '',
+    'Widgets with a lower value are displayed higher.' => '',
 ];

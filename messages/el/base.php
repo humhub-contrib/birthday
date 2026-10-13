@@ -11,4 +11,6 @@ return [
     'You may configure the number of days within the upcoming birthdays are shown.' => 'Μπορείτε να ρυθμίσετε τον αριθμό των ημερών που εμφανίζονται στα επερχόμενα γενέθλια.',
     'becomes {years} years old.' => 'γίνεται {years} ετών.',
     'today' => 'σήμερα',
+    'Sort order of the widget in the dashboard sidebar' => '',
+    'Widgets with a lower value are displayed higher.' => '',
 ];

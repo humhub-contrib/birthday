@@ -9,6 +9,8 @@ return [
     'You may configure the number of days within the upcoming birthdays are shown.' => 'Tu vari konfigurēt dienu skaitu kad parādīsies tuvojošās dzimšanas dienas.',
     'becomes {years} years old.' => 'aprit {years} gadi.',
     'today' => 'šodien',
+    'Sort order of the widget in the dashboard sidebar' => '',
     'The group id of the group that should be exluded.' => '',
     'The number of days future birthdays will be shown within.' => '',
+    'Widgets with a lower value are displayed higher.' => '',
 ];

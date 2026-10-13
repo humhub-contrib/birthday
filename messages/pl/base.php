@@ -11,4 +11,6 @@ return [
     'You may configure the number of days within the upcoming birthdays are shown.' => 'Możesz skonfigurować liczbę dni kiedy będą pokazywane nadchodzące urodziny.',
     'becomes {years} years old.' => 'ma {years} lat.',
     'today' => 'dzisiaj',
+    'Sort order of the widget in the dashboard sidebar' => '',
+    'Widgets with a lower value are displayed higher.' => '',
 ];

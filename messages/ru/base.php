@@ -11,4 +11,6 @@ return [
     'You may configure the number of days within the upcoming birthdays are shown.' => 'Вы можете настроить количество предстоящих дней рождения для отображения в блоке.',
     'becomes {years} years old.' => 'становится на {years} лет старше.',
     'today' => 'сегодня',
+    'Sort order of the widget in the dashboard sidebar' => '',
+    'Widgets with a lower value are displayed higher.' => '',
 ];

@@ -11,4 +11,6 @@ return [
     'You may configure the number of days within the upcoming birthdays are shown.' => 'U kunt het aantal dagen waarin toekomstige verjaardagen getoond worden instellen.',
     'becomes {years} years old.' => 'wordt {years} jaar oud.',
     'today' => 'vandaag',
+    'Sort order of the widget in the dashboard sidebar' => '',
+    'Widgets with a lower value are displayed higher.' => '',
 ];
