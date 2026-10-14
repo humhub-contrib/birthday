@@ -5,7 +5,7 @@ return [
     'Back to modules' => 'Tilbage til moduler',
     'Birthday Module Configuration' => 'Fødselsdag Modul konfiguration',
     'In {days} days' => 'Om {days} dage',
-    'The group id of the group that should be exluded.' => 'ID\'et for den gruppe som skal ekskluderes.',
+    'The group id of the group that should be excluded.' => 'ID\'et for den gruppe som skal ekskluderes.',
     'The number of days future birthdays will be shown within.' => 'Hvor mange dage ud i fremtiden fødselsdage vises.',
     'Tomorrow' => 'Imorgen',
     'You may configure the number of days within the upcoming birthdays are shown.' => 'Du kan indstille, antallet af dage som vises  i kommende fødselsdage.',

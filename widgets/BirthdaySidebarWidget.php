@@ -3,8 +3,8 @@
 namespace humhub\modules\birthday\widgets;
 
 use humhub\modules\birthday\models\BirthdayConfigureForm;
+use humhub\modules\user\models\ProfileField;
 use humhub\modules\user\models\User;
-use Yii;
 use yii\base\Widget;
 
 /**
@@ -19,6 +19,12 @@ class BirthdaySidebarWidget extends Widget
 {
     public function run()
     {
+        // Respect the visibility setting of the profile field
+        $field = ProfileField::findOne(['internal_name' => 'birthday']);
+        if ($field === null || !$field->visible) {
+            return '';
+        }
+
         $config = new BirthdayConfigureForm();
         $range = (int) $config->shownDays;
         $excludedGroup = (int) $config->excludedGroup;
@@ -35,7 +41,7 @@ class BirthdaySidebarWidget extends Widget
                 ->joinWith('profile')
                 ->where($birthdayCondition)
                 ->addOrderBy(['next_birthday' => SORT_ASC])
-                ->active()
+                ->available()
                 ->limit(10)
                 ->all();
 
@@ -49,34 +55,45 @@ class BirthdaySidebarWidget extends Widget
         ]);
     }
 
-    public function getDays($user)
+    /**
+     * Next birthday date (today or later), consistent with the SQL in run():
+     * a birthday on Feb 29 is moved to Feb 28 in non-leap years.
+     */
+    protected function getNextBirthday($user): \DateTime
     {
-        $now = new \DateTime('now');
-        $now->setTime(00, 00, 00);
-        $nextBirthday = new \DateTime(date('y') . '-' . Yii::$app->formatter->asDate($user->profile->birthday, 'php:m-d'));
-        $interval = $now->diff($nextBirthday);
+        $birthday = new \DateTime($user->profile->birthday);
+        $today = new \DateTime('today');
 
-        $days = (int) $interval->format('%R%a');
-
-        // Handle turn of year
-        if ($days < 0) {
-            $nextBirthday->modify('+1 year');
-            $days = $nextBirthday->diff($now)->days;
+        $year = (int) $today->format('Y');
+        $next = $this->getBirthdayInYear($birthday, $year);
+        if ($next < $today) {
+            $next = $this->getBirthdayInYear($birthday, $year + 1);
         }
 
-        return $days;
+        return $next;
+    }
+
+    private function getBirthdayInYear(\DateTime $birthday, int $year): \DateTime
+    {
+        $month = (int) $birthday->format('n');
+        $day = (int) $birthday->format('j');
+        if ($month === 2 && $day === 29 && !checkdate(2, 29, $year)) {
+            $day = 28;
+        }
+
+        return (new \DateTime())->setDate($year, $month, $day)->setTime(0, 0, 0);
+    }
+
+    public function getDays($user)
+    {
+        return (int) (new \DateTime('today'))->diff($this->getNextBirthday($user))->days;
     }
 
     public function getAge($user)
     {
         $birthday = new \DateTime($user->profile->birthday);
-        $age = $birthday->diff(new \DateTime('now'))->y;
 
-        if ($this->getDays($user) != 0) {
-            $age++;
-        }
-
-        return $age;
+        return (int) $this->getNextBirthday($user)->format('Y') - (int) $birthday->format('Y');
     }
 
 }

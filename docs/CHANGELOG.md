@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.2 (Unreleased)
+------------------
+- Fix #58: Hidden and blocked users shown in widget; Hidden profile field ignored; Feb 29 birthday off by one day; Typo in hint
+
 1.2.1 (October 13, 2026)
 ------------------------
 - Enh #46: Option to set sort order of the sidebar widget in module configuration

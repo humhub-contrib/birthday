@@ -10,7 +10,7 @@ return [
     'becomes {years} years old.' => 'menjadi {years} tahun lebih tua',
     'today' => 'Hari ini',
     'Sort order of the widget in the dashboard sidebar' => '',
-    'The group id of the group that should be exluded.' => '',
+    'The group id of the group that should be excluded.' => '',
     'The number of days future birthdays will be shown within.' => '',
     'Widgets with a lower value are displayed higher.' => '',
 ];

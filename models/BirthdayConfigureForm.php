@@ -55,7 +55,7 @@ class BirthdayConfigureForm extends Model
     {
         return [
             'shownDays' => Yii::t('BirthdayModule.base', 'The number of days future birthdays will be shown within.'),
-            'excludedGroup' => Yii::t('BirthdayModule.base', 'The group id of the group that should be exluded.'),
+            'excludedGroup' => Yii::t('BirthdayModule.base', 'The group id of the group that should be excluded.'),
             'sidebarSortOrder' => Yii::t('BirthdayModule.base', 'Sort order of the widget in the dashboard sidebar'),
         ];
     }

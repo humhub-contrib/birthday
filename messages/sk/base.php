@@ -5,7 +5,7 @@ return [
     'Back to modules' => 'Späť k modulom',
     'Birthday Module Configuration' => 'Konfigurácia modulu Narodeniny',
     'In {days} days' => 'O {days} dní',
-    'The group id of the group that should be exluded.' => 'ID skupiny, ktorá by mala byť vylúčená.',
+    'The group id of the group that should be excluded.' => 'ID skupiny, ktorá by mala byť vylúčená.',
     'The number of days future birthdays will be shown within.' => 'Počet dní, počas ktorých sa budú zobrazovať budúce narodeniny.',
     'Tomorrow' => 'Zajtra',
     'You may configure the number of days within the upcoming birthdays are shown.' => 'Môžete nakonfigurovať počet dní, počas ktorých sa budú zobrazovať nadchádzajúce narodeniny.',
