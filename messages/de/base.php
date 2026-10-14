@@ -5,7 +5,7 @@ return [
     'Back to modules' => 'Zurück zu den Modulen',
     'Birthday Module Configuration' => 'Konfiguration Geburtstagsmodul',
     'In {days} days' => 'In {days} Tagen',
-    'The group id of the group that should be exluded.' => 'Die Gruppen-ID der Gruppe, die ausgeschlossen werden soll.',
+    'The group id of the group that should be excluded.' => 'Die Gruppen-ID der Gruppe, die ausgeschlossen werden soll.',
     'The number of days future birthdays will be shown within.' => 'Die Anzahl der Tage, an denen die zukünftigen Geburtstage angezeigt werden.',
     'Tomorrow' => 'Morgen',
     'You may configure the number of days within the upcoming birthdays are shown.' => 'Du kannst die Anzahl an Tagen einstellen, an denen zukünftige Geburstage vorab angezeigt werden.',

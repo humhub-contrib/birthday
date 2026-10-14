@@ -5,7 +5,7 @@ return [
     'Back to modules' => 'Takaisin',
     'Birthday Module Configuration' => '<strong>Syntymäpäivä</strong> laajennuksen hallinta',
     'In {days} days' => '{days} päivän päästä',
-    'The group id of the group that should be exluded.' => 'Ryhmä, joka tulisi jättää pois.',
+    'The group id of the group that should be excluded.' => 'Ryhmä, joka tulisi jättää pois.',
     'The number of days future birthdays will be shown within.' => 'Voit määrittää kuinka monta päivää ennen syntymäpäivät näkyvät.',
     'Tomorrow' => 'Huomenna',
     'You may configure the number of days within the upcoming birthdays are shown.' => 'Voit määrittää kuinka monta päivää ennen syntymäpäivät näkyvät.',
